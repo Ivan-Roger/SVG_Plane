@@ -171,3 +171,55 @@ This is an SVG Animation of a plane
 </g>
 
 </svg>
+=======
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet href="handson.css" type="text/css"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="750" viewBox="0 0 1000 750" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect class="background" x="0" y="0" width="1000" height="750"/>
+
+
+<!-- draw background grid -->
+<path class="thin" style="stroke-opacity:0.2" d="M0,0 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10 h1000v-780h-1000v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750"/>
+<path class="outline" style="stroke-opacity:0.2" d="M0,0 h1000v50h-1000v50h1000v50h-1000v50  h1000v50h-1000v50h1000v50h-1000v50 h1000v50h-1000v50h1000v50h-1000v50 h1000v50h-1000v50h1000v50h-1000 h1000v-750h-1000v750 h50v-750h50v750h50v-750h50v750 h50v-750h50v750h50v-750h50v750 h50v-750h50v750h50v-750h50v750 h50v-750h50v750h50v-750h50v750 h50v-750h50v750h50v-750h50v750 h50v-750h50v750h50v-750h50v750 h50v-750h50v750h50v-750h50v750 "/>
+<text x="0" style="text-anchor:middle;font-size:10px">
+<tspan x="50" y="10">50</tspan>
+<tspan x="100" y="10">100</tspan>
+<tspan x="150" y="10">150</tspan>
+<tspan x="200" y="10">200</tspan>
+<tspan x="250" y="10">250</tspan>
+<tspan x="300" y="10">300</tspan>
+<tspan x="350" y="10">350</tspan>
+<tspan x="400" y="10">400</tspan>
+<tspan x="450" y="10">450</tspan>
+<tspan x="500" y="10">500</tspan>
+<tspan x="550" y="10">550</tspan>
+<tspan x="600" y="10">600</tspan>
+<tspan x="650" y="10">650</tspan>
+<tspan x="700" y="10">700</tspan>
+<tspan x="750" y="10">750</tspan>
+<tspan x="800" y="10">800</tspan>
+<tspan x="850" y="10">850</tspan>
+<tspan x="900" y="10">900</tspan>
+<tspan x="950" y="10">950</tspan>
+</text>
+<text style="text-anchor:start;font-size:10px">
+<tspan x="980" y="53">50</tspan>
+<tspan x="980" y="103">100</tspan>
+<tspan x="980" y="153">150</tspan>
+<tspan x="980" y="203">200</tspan>
+<tspan x="980" y="253">250</tspan>
+<tspan x="980" y="303">300</tspan>
+<tspan x="980" y="353">350</tspan>
+<tspan x="980" y="403">400</tspan>
+<tspan x="980" y="453">450</tspan>
+<tspan x="980" y="503">500</tspan>
+<tspan x="980" y="553">550</tspan>
+<tspan x="980" y="603">600</tspan>
+<tspan x="980" y="653">650</tspan>
+<tspan x="980" y="703">700</tspan>
+
+</text>
+<!-- end draw grid -->
+
+</svg>
+>>>>>>> 157311e96e39f5be9055472bec574a84199fecc1
