@@ -1,23 +1,7 @@
 /* Style sheet for the handson event */
+svg {background-color:#eeeeff}
 
-
-<<<<<<< HEAD
-svg {background-color:#CCC}
-
-rect.background {fill:#CCC;stroke:none}
-=======
-
-
-rect.background {fill:#eeeeff;stroke:none}
->>>>>>> 157311e96e39f5be9055472bec574a84199fecc1
 .outline {stroke:black; fill:none; stroke-width:3}
 .thin {stroke:black; fill:none; stroke-width:1}
 .filled {stroke:none; fill:lemonchiffon}
 .both {stroke:black; stroke-width:3; fill:lemonchiffon}
-
-text.boat      {font-family:Arial;font-size:10; font-weight:bold; fill:#0C469C; font-style:italic}
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 157311e96e39f5be9055472bec574a84199fecc1
