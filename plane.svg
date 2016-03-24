@@ -45,6 +45,95 @@
 <tspan x="980" y="703">700</tspan>
 
 </text>
-<!-- end draw grid -->
+<!-- end draw grid  -->
+
+<defs>
+	<g id="SideWing">
+		<path d="
+			m0,20
+			q275,-20 450,0
+			q-20,8 -15,60
+			q-265,-55 -445,-45
+			q-15,0 10,-17z
+			" />
+
+		<path id="MiddleLine" d="
+			m0,25
+			q175,-20 437,15" />
+
+		<!-- Little lines on the down part of the wing -->
+		<path id="LittleLines" d="
+			m300,25
+			q-13,20 -15,27
+			m-100,-12
+			q-0,-20 3,-22
+			m-3,0
+			q-7,20 -6,22
+			m-178-15
+			q-5,-0 -1,10" />
+	</g>
+
+	<g id="Motor">
+		<circle id="Motor1" cx="3" cy="1" r="35" />
+		<circle id="Motor2" cx="0" cy="0" r="27" />
+		<circle id="Motor3" cx="0" cy="0" r="17" />
+		<circle id="Motor4" cx="0" cy="0" r="17" />
+	</g>
+
+	<g id="WingAndMotor">
+	<use x="240" y="64" xlink:href="#Motor"/>
+		<use x="0" y="0" xlink:href="#SideWing"/>
+	</g>
+
+	<path id="Fuselage" d="
+		m0,0
+		q-4,-52 15,-60
+		q20,-100 100,-120
+		q80,0 100,120
+		q20,8 15,60"/>
+
+	<g id="BackWing">
+		<path d="
+			m0,0
+			q-115,-5 -280 -30
+			l2,-8
+			l-25,-8
+			q125,15 290,25 z"/>
+
+		<path d="
+			m-6,-10
+			q-115,-5 -272,-27"/>
+	</g>
+
+	<g id="UpperWing">
+		<path d="
+			m0,0
+			q-5,-165 10,-360
+			q15,175 15,360
+
+
+			" />
+		<path d="
+			m10,0
+			q-5,-165 0,-360" />
+	</g>
+
+	<g id="PlaneBody">
+		<use x="50" y="-100" xlink:href="#BackWing"/>
+		<use x="-185" y="-100" xlink:href="#BackWing" transform="scale(-1,1)"/>
+		<use x="110" y="-180" xlink:href="#UpperWing"/>
+		<use x="0" y="0" xlink:href="#Fuselage"/>
+
+	</g>
+
+	<g id="Plane">
+		<use x="0" y="0" xlink:href="#PlaneBody"/>
+		<use x="-434" y="-80" xlink:href="#WingAndMotor"/>
+		<use x="-664" y="-80" xlink:href="#WingAndMotor" transform="scale(-1,1)"/>
+	</g>
+</defs>
+
+	<use x="534" y="630" xlink:href="#Plane" transform="scale(0.7,0.7)"/>
+
 
 </svg>
