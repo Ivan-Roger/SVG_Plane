@@ -74,10 +74,10 @@
 	</g>
 
 	<g id="Motor">
-		<circle cx="3" cy="1" r="35" style="fill: #ECF5F8"/>
-		<circle cx="0" cy="0" r="27" style="fill: #3D2000"/>
-		<circle cx="0" cy="0" r="17" style="stroke: black" stroke-width="3"/>
-		<circle cx="0" cy="0" r="17" style="fill: #3D2000"/>
+		<circle id="Motor1" cx="3" cy="1" r="35" />
+		<circle id="Motor2" cx="0" cy="0" r="27" />
+		<circle id="Motor3" cx="0" cy="0" r="17" />
+		<circle id="Motor4" cx="0" cy="0" r="17" />
 	</g>
 
 	<g id="WingAndMotor">

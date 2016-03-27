@@ -1,7 +1,18 @@
 /* Style sheet for the handson event */
-svg {background-color:#eeeeff}
 
+#SideWing,#PlaneBody {stroke:black; fill:#ECF5F8}
+
+#MiddleLine,#LittleLines {fill:none}
+
+#Motor1{fill: #ECF5F8}
+#Motor2,#Motor4 {fill: #3D2000}
+#Motor3 {stroke: black; stroke-width:3}
+
+
+rect.background {fill:#eeeeff;stroke:none}
 .outline {stroke:black; fill:none; stroke-width:3}
 .thin {stroke:black; fill:none; stroke-width:1}
 .filled {stroke:none; fill:lemonchiffon}
 .both {stroke:black; stroke-width:3; fill:lemonchiffon}
+
+text.boat      {font-family:Arial;font-size:10; font-weight:bold; fill:#0C469C; font-style:italic}
