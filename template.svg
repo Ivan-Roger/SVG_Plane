@@ -51,32 +51,32 @@ This is an SVG Animation of a plane
 	</g>
 
 	<!-- ============== MOUNTAINS ============== -->
-	<g id="mountain_Colors_1">
-			<rect x="0" y="-60" width="55" height="10" style="fill: #4A2D19"/> <!-- TODO style in CSS -->
-			<rect x="0" y="-50" width="55" height="50" style="fill: #1C4A11"/> <!-- TODO style in CSS -->
-			<rect x="0" y="-80" width="55" height="20" style="fill: #FFF"/> <!-- TODO: Try to do melting snow --> <!-- TODO style in CSS -->
+	<g id="mountain_colors_1" class="mountain">
+		<rect x="0" y="-80" width="55" height="20" class="snow"/> <!-- TODO: Try to do melting snow -->
+		<rect x="0" y="-60" width="55" height="10" class="dirt"/>
+		<rect x="0" y="-50" width="55" height="50" class="grass"/>
 	</g>
-	<g id="mountain_Colors_2">
-			<rect x="0" y="-60" width="55" height="10" style="fill: #4A2D19"/> <!-- TODO style in CSS -->
-			<rect x="0" y="-50" width="55" height="50" style="fill: #18400E"/> <!-- TODO style in CSS -->
-			<rect x="0" y="-80" width="55" height="20" style="fill: #FFF"/> <!-- TODO: Try to do melting snow --> <!-- TODO style in CSS -->
+	<g id="mountain_colors_2" class="mountain">
+		<rect x="0" y="-80" width="55" height="20" class="snow"/> <!-- TODO: Try to do melting snow -->
+		<rect x="0" y="-60" width="55" height="10" class="dirt"/>
+		<rect x="0" y="-50" width="55" height="50" class="grass"/>
 	</g>
-	<g id="mountain_Colors_3">
-			<rect x="0" y="-60" width="55" height="10" style="fill: #4A2D19"/> <!-- TODO style in CSS -->
-			<rect x="0" y="-50" width="55" height="50" style="fill: #284F1B"/> <!-- TODO style in CSS -->
-			<rect x="0" y="-80" width="55" height="20" style="fill: #FFF"/> <!-- TODO: Try to do melting snow --> <!-- TODO style in CSS -->
+	<g id="mountain_colors_3" class="mountain">
+		<rect x="0" y="-80" width="55" height="20" class="snow"/> <!-- TODO: Try to do melting snow -->
+		<rect x="0" y="-60" width="55" height="10" class="dirt"/>
+		<rect x="0" y="-50" width="55" height="50" class="grass"/>
 	</g>
-	<clipPath id="mountain_Clip">
+	<clipPath id="mountain_clip">
 		<path d="M0,0 l30,-80 l25,80" />
 	</clipPath>
 	<g id="mountain1">
-		<use xlink:href="#mountain_Colors_1" style="clip-path: url(#mountain_Clip)"/>
+		<use xlink:href="#mountain_colors_1" style="clip-path: url(#mountain_clip)"/>
 	</g>
 	<g id="mountain2">
-		<use xlink:href="#mountain_Colors_2" style="clip-path: url(#mountain_Clip)"/>
+		<use xlink:href="#mountain_colors_2" style="clip-path: url(#mountain_clip)"/>
 	</g>
 	<g id="mountain3">
-		<use xlink:href="#mountain_Colors_3" style="clip-path: url(#mountain_Clip)"/>
+		<use xlink:href="#mountain_colors_3" style="clip-path: url(#mountain_clip)"/>
 	</g>
 	<g id="mountains">
 		<use transform="translate(0,0) scale(1.7)" xlink:href="#mountain3"/>
@@ -86,13 +86,13 @@ This is an SVG Animation of a plane
 
 	<!-- ============== SUN ============== -->
 	<g id="sunLight">
-		<rect transform="rotate(180)" x="0" y="0" width="2" height="19" style="fill: #E8A426"> <!-- TODO style in CSS -->
+		<rect transform="rotate(180)" x="0" y="0" width="2" height="19"> <!-- TODO style in CSS -->
 			<animate attributeName="height" values="19;13;16;10;19" dur="6s" repeatCount="indefinite"/>
 		</rect>
 	</g>
 	<g id="sun">
-		<circle x="0" y="0" r="20" style="fill: #E8B826"/> <!-- TODO style in CSS -->
-		<circle x="0" y="0" r="16" style="fill: #E8A426"> <!-- TODO style in CSS -->
+		<circle x="0" y="0" r="20" class="back"/>
+		<circle x="0" y="0" r="16" class="in">
 			<animate attributeName="r" values="16;11;14;9;16" dur="5s" repeatCount="indefinite"/>
 		</circle>
 		<use xlink:href="#sunLight" transform="rotate(+000) translate(0,-25)"/>
@@ -117,9 +117,9 @@ This is an SVG Animation of a plane
 
 	<!-- ============== ROAD ============== -->
 	<g id="road">
-		<rect x="0" y="0" width="120" height="80" style="fill: #01142B"/> <!-- TODO style in CSS -->
-		<rect x="30" y="35" width="30" height="10" style="fill: #EFF"/> <!-- TODO style in CSS -->
-		<rect x="90" y="35" width="30" height="10" style="fill: #EFF"/> <!-- TODO style in CSS -->
+		<rect x="0" y="0" width="120" height="80" class="back"/>
+		<rect x="30" y="35" width="30" height="10" class="dash"/>
+		<rect x="90" y="35" width="30" height="10" class="dash"/>
 	</g>
 	<g id="longRoad">
 		<use xlink:href="#road"/>
@@ -133,9 +133,9 @@ This is an SVG Animation of a plane
 	<!-- ============== TREES ============== -->
 	<g id="pine">
 		<path d="M40,70 h-40 l30,-20 h-25 l25,-17 h-20 l20,-15 h-15 l25,-12
-			l25,12 h-15 l20,15 h-20 l25,17 h-25 l30,20 h-40" style="stroke: #0D540D; stroke-width: 0.2em; fill: #137113"/> <!-- TODO style in CSS -->
-		<rect x="30" y="70" width="20" height="30" style="fill: #5E3F1A"/> <!-- TODO style in CSS -->
-		<rect x="33" y="70" width="14" height="27" style="fill: #452C13"/> <!-- TODO style in CSS -->
+			l25,12 h-15 l20,15 h-20 l25,17 h-25 l30,20 h-40" class="leaves"/>
+		<rect x="30" y="70" width="20" height="30" class="log-outline"/>
+		<rect x="33" y="70" width="14" height="27" class="log-in"/>
 	</g>
 	<g id="pineForest">
 		<use xlink:href="#pine" transform="scale(0.5) translate(60,00)"/>
@@ -148,18 +148,18 @@ This is an SVG Animation of a plane
 
 	<!-- ============== HOUSE ============== -->
 	<g id="window">
-		<rect x="0" y="0" width="60" height="80" style="fill: #FFF"/> <!-- TODO style in CSS -->
-		<rect x="5" y="5" width="50" height="70" style="fill: #DEBC24"/> <!-- TODO: Animate color --> <!-- TODO style in CSS -->
-		<rect x="28" y="0" width="4" height="80" style="fill: #FFF"/> <!-- TODO style in CSS -->
-		<rect x="0" y="38" width="60" height="4" style="fill: #FFF"/> <!-- TODO style in CSS -->
+		<rect x="0" y="0" width="60" height="80" class="outline"/>
+		<rect x="5" y="5" width="50" height="70" class="light"/> <!-- TODO: Animate color -->
+		<rect x="28" y="0" width="4" height="80" class="outline"/>
+		<rect x="0" y="38" width="60" height="4" class="outline"/>
 	</g>
 	<g id="mountainHouse"><!-- TODO: Add snow on the roof -->
-		<rect x="10" y="30" width="120" height="60" style="fill: #452C13"/> <!-- TODO style in CSS -->
-		<rect x="60" y="50" width="20" height="40" style="fill: #5E3F1A"/> <!-- Door --> <!-- TODO style in CSS -->
+		<rect x="10" y="30" width="120" height="60" class="wall"/>
+		<rect x="60" y="50" width="20" height="40" class="door"/> <!-- Door -->
 		<use xlink:href="#window" transform="translate(20,40) scale(0.4)"/>
 		<use xlink:href="#window" transform="translate(95,40) scale(0.4)"/>
-		<path d="M0,30 l70,-30 l70,30 z" style="fill: #082F3D"/> <!-- Roof --> <!-- TODO style in CSS -->
-		<rect x="40" y="00" width="10" height="25" style="fill: #452C13"/> <!-- Cheminey --> <!-- TODO style in CSS -->
+		<path d="M0,30 l70,-30 l70,30 z" class="roof"/> <!-- Roof -->
+		<rect x="40" y="00" width="10" height="25" class="cheminey"/> <!-- Cheminey -->
 	</g>
 
 	<!-- ============== CLOUDS ============== -->
@@ -170,8 +170,7 @@ This is an SVG Animation of a plane
 			c20,-10 40,20 25,25
 			c20,10 -10,25 -25,20
 			c-5,10 -70,5 -65,-10
-			q-14,-27, 10,-30 "
-		style="fill: rgba(153, 170, 255, 0.8)"/> <!-- TODO style in CSS -->
+			q-14,-27, 10,-30 "/>
 	</g>
 
 	<g id="animatedCloud1">
@@ -195,20 +194,64 @@ This is an SVG Animation of a plane
 		</use>
 	</g>
 
-	<linearGradient id="skyColor" x1="0" y1="0" x2="0" y2="100%">
-    <stop offset="0" style="stop-color: rgba(109, 172, 255, 1); stop-opacity: 1" /> <!-- TODO style in CSS -->
-    <stop offset="100%" style="stop-color: #4977ff; stop-opacity: 1" /> <!-- TODO style in CSS -->
-  </linearGradient>
-</defs>
+	<!-- ============== AIRPORT ============== -->
+	<g id="controlTower">
+		<rect x="20" y="45" width="30" height="70" class="base"/>
+		<path d="M0,15 h70 l-20,30 h-30 l-20,-30" class="base"/>
+		<path d="M5,20 h55 l-10,15 h-30 l-10,-15" class="window"/>
+		<rect x="32.5" y="0" width="5" height="15" class="radar"/>
+		<rect x="10" y="0" width="50" height="10" class="radar">
+			<animate attributeType="xml" attributeName="width" values="50;5;50" begin="0s" dur="5s" repeatCount="indefinite"/>
+			<animate attributeType="xml" attributeName="x" values="10;32.5;10" begin="0s" dur="5s" repeatCount="indefinite"/>
+		</rect>
+	</g>
+	<g id="airport">
+		<path d="M10,60 h500 l10,300 h-510 l10,-300" class="building"/>
+		<use x="70" y="0" xlink:href="#controlTower" transform="scale(1.2)"/>
+	</g>
 
+	<linearGradient id="skyColor" x1="0" y1="0" x2="0" y2="100%">
+    <stop offset="0" class="begin" />
+    <stop offset="100%" class="end" />
+  </linearGradient>
+
+	<g id="grass">
+		<rect x="0" y="180" width="750" height="320"/>
+	</g>
+</defs>
 <g>
+	<!-- ============== BACKGROUND ============== -->
 	<rect x="0" y="0" width="750" height="180" style="fill: url(#skyColor)"/>
-	<rect x="0" y="180" width="750" height="320" style="fill: #469931"/> <!-- TODO style in CSS -->
+	<use xlink:href="#grass"/>
 	<use xlink:href="#sun" transform="translate(15,15)"/>
-	<use xlink:href="#mountains" transform="translate(0,200)"/>
-	<use xlink:href="#longRoad" transform="translate(0,300)"/>
-	<use xlink:href="#pineForest" transform="translate(200,150)"/>
+	<use xlink:href="#mountains" transform="translate(-20,200)"/>
+	<use xlink:href="#mountains" transform="translate(320,200)"/>
+	<use xlink:href="#mountains" transform="translate(150,200)"/>
+	<use xlink:href="#mountains" transform="translate(670,200)"/>
+	<use xlink:href="#mountains" transform="translate(490,200)"/>
+	<use xlink:href="#pineForest" transform="translate(-50,130)"/>
+	<use xlink:href="#pineForest" transform="translate(000,150)"/>
+	<use xlink:href="#pineForest" transform="translate(050,140)"/>
+	<use xlink:href="#pineForest" transform="translate(100,150)"/>
+	<use xlink:href="#pineForest" transform="translate(150,150)"/>
+	<use xlink:href="#pineForest" transform="translate(200,130)"/>
+	<use xlink:href="#pineForest" transform="translate(250,150)"/>
+	<use xlink:href="#pineForest" transform="translate(300,150)"/>
+	<use xlink:href="#pineForest" transform="translate(350,140)"/>
+	<use xlink:href="#pineForest" transform="translate(400,130)"/>
+	<use xlink:href="#pineForest" transform="translate(450,130)"/>
+	<use xlink:href="#pineForest" transform="translate(500,140)"/>
+	<use xlink:href="#pineForest" transform="translate(550,150)"/>
+	<use xlink:href="#pineForest" transform="translate(600,150)"/>
+	<use xlink:href="#pineForest" transform="translate(650,130)"/>
+	<use xlink:href="#pineForest" transform="translate(700,150)"/>
 	<use xlink:href="#mountainHouse" transform="translate(400,150)"/>
+	<use xlink:href="#longRoad" transform="translate(0,300)"/>
+
+	<!-- ============== PLANE ============== -->
+
+	<!-- ============== FOREGROUND ============== -->
+	<use xlink:href="#airport" transform="translate(130,350)"/>
 	<g transform="translate(-200)">
 		<use xlink:href="#animatedCloud1"/>
 		<use xlink:href="#animatedCloud2"/>
@@ -218,5 +261,4 @@ This is an SVG Animation of a plane
 
 	<use xlink:href="#grid"/>
 </g>
-
 </svg>

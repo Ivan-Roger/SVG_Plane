@@ -8,11 +8,50 @@
 #Motor2,#Motor4 {fill: #3D2000}
 #Motor3 {stroke: black; stroke-width:3}
 
+.mountain .snow {fill: #FFF;}
+.mountain .dirt {fill: #4A2D19;}
+#mountain_colors_1 .grass {fill: #1C4A11;}
+#mountain_colors_2 .grass {fill: #18400E;}
+#mountain_colors_3 .grass {fill: #284F1B;}
 
-rect.background {fill:#eeeeff;stroke:none}
-.outline {stroke:black; fill:none; stroke-width:3}
-.thin {stroke:black; fill:none; stroke-width:1}
-.filled {stroke:none; fill:lemonchiffon}
-.both {stroke:black; stroke-width:3; fill:lemonchiffon}
+#sunLight > rect {fill: #E8A426;}
+#sun .back {fill: #E8B826;}
+#sun .in {fill: #E8A426;}
 
-text.boat      {font-family:Arial;font-size:10; font-weight:bold; fill:#0C469C; font-style:italic}
+#road .back {fill: #01142B;}
+#road .dash {fill: #EFF;}
+
+#pine .leaves {
+  stroke: #0D540D;
+  stroke-width: 0.2em;
+  fill: #137113;
+}
+#pine .log-outline {fill: #5E3F1A;}
+#pine .log-in {fill: #452C13;}
+
+#window .outline {fill: #FFF;}
+#window .light {fill: #DEBC24;}
+
+#mountainHouse .wall {fill: #452C13;}
+#mountainHouse .door {fill: #5E3F1A;}
+#mountainHouse .roof {fill: #082F3D;}
+#mountainHouse .cheminey {fill: #452C13;}
+
+#cloud path {fill: rgba(153, 170, 255, 0.8);}
+
+#controlTower .base {fill: #7F8C90;}
+#controlTower .window {fill: #2A4675;}
+#controlTower .radar {fill: #D4EDFF;}
+
+#airport .building {fill: #656A7D;}
+
+#skyColor .begin {stop-color: #6dacff;}
+#skyColor .end {stop-color: #4977ff;}
+
+#grass rect {fill: #469931;}
+
+#grid rect.background {fill:#eeeeff;stroke:none}
+#grid .outline {stroke:black; fill:none; stroke-width:3}
+#grid .thin {stroke:black; fill:none; stroke-width:1}
+#grid .filled {stroke:none; fill:lemonchiffon}
+#grid .both {stroke:black; stroke-width:3; fill:lemonchiffon}
