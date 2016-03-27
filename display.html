@@ -4,20 +4,27 @@
     <meta charset="utf-8"/>
     <title>SVG Plane</title>
     <link rel="stylesheet" href="handson.css"/>
+    <style>
+      iframe {
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+      }
+    </style>
   </head>
   <body>
     <p id="info">Loaded 0 seconds ago.</p>
-    <iframe id="image" src="template.svg" style="width: 100%; height: 600px; border: none;"></iframe>
+    <iframe id="image" src="template.svg" style="width: 750px; height: 500px; border: none;"></iframe>
     <script>
       var loaded = Date.now();
       setInterval(function(){
         d = Math.trunc((Date.now()-loaded)/1000);
         document.getElementById('info').innerHTML="Loaded "+d+" seconds ago."
       },250);
-      setInterval(function(){
+      document.getElementById('image').addEventListener('mouseover',function(){
         loaded = Date.now();
         document.getElementById('image').contentWindow.location.reload();
-      },10000);
+      });
     </script>
   </body>
 </html>

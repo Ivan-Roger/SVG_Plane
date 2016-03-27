@@ -46,9 +46,14 @@
 #airport .building {fill: #656A7D;}
 
 #skyColor .begin {stop-color: #6dacff;}
-#skyColor .end {stop-color: #4977ff;}
+#skyColor .end {stop-color: #2B57BA;}
 
 #grass rect {fill: #469931;}
+
+#storm {
+  fill: #C7ECF2;
+  opacity: 0;
+}
 
 #grid rect.background {fill:#eeeeff;stroke:none}
 #grid .outline {stroke:black; fill:none; stroke-width:3}

@@ -128,6 +128,7 @@ This is an SVG Animation of a plane
 		<use xlink:href="#road" transform="translate(360,0)"/>
 		<use xlink:href="#road" transform="translate(480,0)"/>
 		<use xlink:href="#road" transform="translate(600,0)"/>
+		<use xlink:href="#road" transform="translate(720,0)"/>
 	</g>
 
 	<!-- ============== TREES ============== -->
@@ -144,6 +145,24 @@ This is an SVG Animation of a plane
 		<use xlink:href="#pine" transform="scale(0.4) translate(90,130)"/>
 		<use xlink:href="#pine" transform="scale(0.7) translate(10,30)"/>
 		<use xlink:href="#pine" transform="scale(0.5) translate(90,70)"/>
+	</g>
+	<g id="longPineForest">
+		<use xlink:href="#pineForest" transform="translate(000,00)"/>
+		<use xlink:href="#pineForest" transform="translate(050,10)"/>
+		<use xlink:href="#pineForest" transform="translate(100,20)"/>
+		<use xlink:href="#pineForest" transform="translate(150,20)"/>
+		<use xlink:href="#pineForest" transform="translate(200,00)"/>
+		<use xlink:href="#pineForest" transform="translate(250,20)"/>
+		<use xlink:href="#pineForest" transform="translate(300,20)"/>
+		<use xlink:href="#pineForest" transform="translate(350,10)"/>
+		<use xlink:href="#pineForest" transform="translate(400,00)"/>
+		<use xlink:href="#pineForest" transform="translate(450,00)"/>
+		<use xlink:href="#pineForest" transform="translate(500,10)"/>
+		<use xlink:href="#pineForest" transform="translate(550,20)"/>
+		<use xlink:href="#pineForest" transform="translate(600,20)"/>
+		<use xlink:href="#pineForest" transform="translate(650,00)"/>
+		<use xlink:href="#pineForest" transform="translate(700,20)"/>
+		<use xlink:href="#pineForest" transform="translate(750,20)"/>
 	</g>
 
 	<!-- ============== HOUSE ============== -->
@@ -216,49 +235,40 @@ This is an SVG Animation of a plane
   </linearGradient>
 
 	<g id="grass">
-		<rect x="0" y="180" width="750" height="320"/>
+		<rect width="10000" height="320"/>
 	</g>
 </defs>
 <g>
-	<!-- ============== BACKGROUND ============== -->
-	<rect x="0" y="0" width="750" height="180" style="fill: url(#skyColor)"/>
-	<use xlink:href="#grass"/>
+	<rect x="0" y="0" width="750" height="500" style="fill: url(#skyColor)"/>
 	<use xlink:href="#sun" transform="translate(15,15)"/>
-	<use xlink:href="#mountains" transform="translate(-20,200)"/>
-	<use xlink:href="#mountains" transform="translate(320,200)"/>
-	<use xlink:href="#mountains" transform="translate(150,200)"/>
-	<use xlink:href="#mountains" transform="translate(670,200)"/>
-	<use xlink:href="#mountains" transform="translate(490,200)"/>
-	<use xlink:href="#pineForest" transform="translate(-50,130)"/>
-	<use xlink:href="#pineForest" transform="translate(000,150)"/>
-	<use xlink:href="#pineForest" transform="translate(050,140)"/>
-	<use xlink:href="#pineForest" transform="translate(100,150)"/>
-	<use xlink:href="#pineForest" transform="translate(150,150)"/>
-	<use xlink:href="#pineForest" transform="translate(200,130)"/>
-	<use xlink:href="#pineForest" transform="translate(250,150)"/>
-	<use xlink:href="#pineForest" transform="translate(300,150)"/>
-	<use xlink:href="#pineForest" transform="translate(350,140)"/>
-	<use xlink:href="#pineForest" transform="translate(400,130)"/>
-	<use xlink:href="#pineForest" transform="translate(450,130)"/>
-	<use xlink:href="#pineForest" transform="translate(500,140)"/>
-	<use xlink:href="#pineForest" transform="translate(550,150)"/>
-	<use xlink:href="#pineForest" transform="translate(600,150)"/>
-	<use xlink:href="#pineForest" transform="translate(650,130)"/>
-	<use xlink:href="#pineForest" transform="translate(700,150)"/>
-	<use xlink:href="#mountainHouse" transform="translate(400,150)"/>
-	<use xlink:href="#longRoad" transform="translate(0,300)"/>
+	<use xlink:href="#animatedCloud1" transform="translate(-200)"/>
+	<use xlink:href="#animatedCloud4" transform="translate(-200)"/>
 
-	<!-- ============== PLANE ============== -->
+	<g><!-- ======================================================== SCENE 1 ======================================================== -->
+		<!-- ============== BACKGROUND ============== -->
+		<use y="180" xlink:href="#grass"/>
+		<use xlink:href="#mountains" transform="translate(-20,200)"/>
+		<use xlink:href="#mountains" transform="translate(320,200)"/>
+		<use xlink:href="#mountains" transform="translate(150,200)"/>
+		<use xlink:href="#mountains" transform="translate(670,200)"/>
+		<use xlink:href="#mountains" transform="translate(490,200)"/>
+		<use xlink:href="#longPineForest" transform="translate(-30,130)"/>
+		<use xlink:href="#mountainHouse" transform="translate(400,150)"/>
+		<use xlink:href="#longRoad" transform="translate(0,300)"/>
 
-	<!-- ============== FOREGROUND ============== -->
-	<use xlink:href="#airport" transform="translate(130,350)"/>
-	<g transform="translate(-200)">
-		<use xlink:href="#animatedCloud1"/>
-		<use xlink:href="#animatedCloud2"/>
-		<use xlink:href="#animatedCloud3"/>
-		<use xlink:href="#animatedCloud4"/>
+		<!-- ============== PLANE ============== -->
+
+		<!-- ============== FOREGROUND ============== -->
+		<use xlink:href="#airport" transform="translate(130,350)"/>
+
+		<animateTransform id="scene1" attributeName="transform" type="translate" values="0,0;-100,0;-200,0;-300,0;-400,0;-500,10;-600,20;-700,50;-800,90;-900,140;-1000,200;-1100,270;-1200,350;" begin="2s" dur="10s" fill="freeze"/>
 	</g>
 
-	<use xlink:href="#grid"/>
+	<use xlink:href="#animatedCloud2" transform="translate(-200)"/>
+	<use xlink:href="#animatedCloud3" transform="translate(-200)"/>
+	<rect width="100%" height="100%" id="storm">
+		<animate attributeType="css" attributeName="opacity" values="0;0.9;0;0;0;0;0.9;0;0.9;0" begin="scene1.end" dur="0.4s"/>
+	</rect>
+	<!-- <use xlink:href="#grid"/> -->
 </g>
 </svg>
