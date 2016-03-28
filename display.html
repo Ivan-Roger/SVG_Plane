@@ -23,7 +23,7 @@
   <body>
     <div>
       <button id="gridSwicth" onclick="switchGrid()">Hide grid</button>
-      <button onclick="startAnimations()">Start animations</button>
+      <button onclick="startAnimation()">Start animation</button>
       <span id="info">Loaded 0 seconds ago.</span>
     </div>
     <iframe id="image" src="template.svg"></iframe>
@@ -31,7 +31,7 @@
       var loaded = Date.now();
       var grid;
 
-      function startAnimations() {
+      function startAnimation() {
         var doc = document.getElementById('image').contentWindow.document;
         doc.getElementById('scene1').beginElement();
       }

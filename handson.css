@@ -7,6 +7,32 @@
 #Motor1{fill: #ECF5F8}
 #Motor2,#Motor4 {fill: #3D2000}
 #Motor3 {stroke: black; stroke-width:3}
+/* Style sheet for the handson event */
+
+#Plane{stroke:black; fill:#E0EBE2}
+
+/* Plane of the first scene */
+#MiddleLine,#LittleLines {fill:none}
+#Motor2,#Motor4 {fill: #3D2000}
+#Motor3 {stroke: black; stroke-width:3}
+#LandingGear {fill:#363435; stroke:black}
+
+/* Landscape of the first scene */
+#Road {fill:#01142B; stroke:black}
+#Marking {fill:white; stroke:black}
+
+/* WalkBridge of the frist scene */
+#WalkBridge {fill:#BFB5A4; stroke:#BFB5A4; stroke-width:3}
+#Glass {fill:#E3EBE2; fill-opacity:0.6}
+#BetweenPlaneAndBridge {fill:#BFB5A4; stroke:black; stroke-width:1}
+
+/* Plane of the second scene */
+#PilotWindow {fill:#2A4675}
+#PassengerWindow {fill:#2A4675}
+#Motor5 {fill: #3D2000}
+#Motor6 {stroke: black; stroke-width:2}
+
+#Window {fill:none; stroke:white; stroke-width:3}
 
 .mountain .snow {fill: #FFF;}
 .mountain .dirt {fill: #4A2D19;}

@@ -352,6 +352,10 @@ This is an SVG Animation of a plane
 	<g id="grass">
 		<rect width="10000" height="320"/>
 	</g>
+
+	<g id="palmTree">
+		<path d="M"/>
+	</g>
 </defs>
 <!--
 	========================================================================================================================
@@ -361,12 +365,12 @@ This is an SVG Animation of a plane
 <g id="display">
 	<rect x="0" y="0" width="750" height="500" style="fill: url(#skyColor)"/>
 	<use x="15" y="15" xlink:href="#sun">
-		<animate attributeType="css" attributeName="opacity" values="1;0;0;0;0;0;0;0;0;0;0;1" begin="scene2.begin" dur="10s" />
+		<animate attributeType="css" attributeName="opacity" values="1;1;0.5;0;0;0;0;0;0;0;0;1" begin="scene2.begin" dur="8s" />
 	</use>
 	<use xlink:href="#animatedCloud1" transform="translate(-200)"/>
 	<use xlink:href="#animatedCloud4" transform="translate(-200)"/>
 
-	<!-- ======================================================== SCENE 1 ======================================================== -->
+	<!-- ======================================================== START OF SCENE 1 ======================================================== -->
 	<g>
 		<!-- ============== BACKGROUND ============== -->
 		<use y="180" xlink:href="#grass"/>
@@ -380,10 +384,10 @@ This is an SVG Animation of a plane
 		<use x="0" y="300" xlink:href="#longRoad"/>
 
 		<!-- ============== PLANE ============== -->
-		<!-- <path d="M100,350 h550 c350,00 400,-50 900,-400 q125,-80 300,-50 h500" fill="none" stroke="black" stroke-width="2"/> -->
 		<use x="100" y="250" xlink:href="#Plane">
 			<animateMotion path="M0,0 h550 c350,00 400,-50 900,-400 q125,-80 300,-50 h500" begin="scene1.begin" dur="14s" fill="freeze"/>
 			<animateTransform attributeName="transform" type="rotate" values="0;-5;-10;0" begin="scene1.begin" dur="14s" fill="freeze"/>
+			<animateMotion path="M0,0 h550 c350,00 400,-50 900,-400 q125,-80 300,-50 h500" begin="scene1.begin" dur="14s" fill="freeze"/>
 		</use>
 
 		<!-- ============== FOREGROUND ============== -->
@@ -401,6 +405,7 @@ This is an SVG Animation of a plane
 		<animateTransform attributeName="transform" type="translate" values="0,-200;0,-50;0,-50;0,-50;0,-50;0,-50;0,-50;0,-50;0,-50;0,-200" begin="scene2.begin" dur="10s" />
 		<animate id="scene2" attributeType="css" attributeName="opacity" values="0;1;1;1;1;1;0" begin="scene1.end" dur="10s" />
 	</g>
+	<!-- ======================================================== END OF SCENE 1 ======================================================== -->
 
 	<rect width="100%" height="100%" id="storm">
 		<animate attributeType="css" attributeName="opacity" values="0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0.9;0;0;0;0;0;0.9;0;0.9;0;0;0;0;0" begin="scene2.begin" dur="5.4s"/>
