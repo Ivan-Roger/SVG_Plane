@@ -37,7 +37,7 @@
 #mountainHouse .roof {fill: #082F3D;}
 #mountainHouse .cheminey {fill: #452C13;}
 
-#cloud path {fill: rgba(153, 170, 255, 0.8);}
+#cloud path {fill: rgba(153, 170, 255, 0.85);}
 
 #controlTower .base {fill: #7F8C90;}
 #controlTower .window {fill: #2A4675;}

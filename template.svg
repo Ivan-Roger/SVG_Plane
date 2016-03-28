@@ -8,8 +8,8 @@ This is an SVG Animation of a plane
 <defs>
 	<g id="grid">
 		<!-- draw background grid -->
-		<path class="thin" style="stroke-opacity:0.2" d="M0,0 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10 h1000v-780h-1000v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750"/>
-		<path class="outline" style="stroke-opacity:0.2" d="M0,0 h1000v50h-1000v50h1000v50h-1000v50  h1000v50h-1000v50h1000v50h-1000v50 h1000v50h-1000v50h1000v50h-1000v50 h1000v50h-1000v50h1000v50h-1000 h1000v-750h-1000v750 h50v-750h50v750h50v-750h50v750 h50v-750h50v750h50v-750h50v750 h50v-750h50v750h50v-750h50v750 h50v-750h50v750h50v-750h50v750 h50v-750h50v750h50v-750h50v750 h50v-750h50v750h50v-750h50v750 h50v-750h50v750h50v-750h50v750 "/>
+		<path class="thin" style="stroke-opacity:0.2" d="M0,0 h750v10h-750v10h750v10h-750v10 h750v10h-750v10h750v10h-750v10 h750v10h-750v10h750v10h-750v10 h750v10h-750v10h750v10h-750v10 h750v10h-750v10h750v10h-750v10 h750v10h-750v10h750v10h-750v10 h750v10h-750v10h750v10h-750v10 h750v10h-750v10h750v10h-750v10 h750v10h-750v10h750v10h-750v10 h750v10h-750v10h750v10h-750v10 h750v10h-750v10h750v10h-750v10 h750v10h-750v10h750v10h-750v10 h750v10h-750v10h750v10h-750v10 h750v10h-750v10h750v10h-750v10 h750v10h-750v10h750v10h-750v10 h750v10h-750v10h750v10h-750v10 h750v10h-750v10h750v10h-750v10 h750v10h-750v10h750v10h-750v10 h750v10h-750v10h750v10h-750v10 h750v10h-750v10 h750v-780h-750v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750"/>
+		<path class="outline" style="stroke-opacity:0.2" d="M0,0 h750v50h-750v50h750v50h-750v50  h750v50h-750v50h750v50h-750v50 h750v50h-750v50h750v50h-750v50 h750v50h-750v50h750v50h-750 h750v-750h-750v500 h50v-500h50v500h50v-500h50v500 h50v-500h50v500h50v-500h50v500 h50v-500h50v500h50v-500h50v500 h50v-500h50v500h50v-500"/>
 		<text x="0" style="text-anchor:middle;font-size:10px">
 			<tspan x="50" y="10">50</tspan>
 			<tspan x="100" y="10">100</tspan>
@@ -25,27 +25,19 @@ This is an SVG Animation of a plane
 			<tspan x="600" y="10">600</tspan>
 			<tspan x="650" y="10">650</tspan>
 			<tspan x="700" y="10">700</tspan>
-			<tspan x="750" y="10">750</tspan>
-			<tspan x="800" y="10">800</tspan>
-			<tspan x="850" y="10">850</tspan>
-			<tspan x="900" y="10">900</tspan>
-			<tspan x="950" y="10">950</tspan>
+			<tspan x="740" y="10">750</tspan>
 		</text>
-		<text style="text-anchor:start;font-size:10px">
-			<tspan x="980" y="53">50</tspan>
-			<tspan x="980" y="103">100</tspan>
-			<tspan x="980" y="153">150</tspan>
-			<tspan x="980" y="203">200</tspan>
-			<tspan x="980" y="253">250</tspan>
-			<tspan x="980" y="303">300</tspan>
-			<tspan x="980" y="353">350</tspan>
-			<tspan x="980" y="403">400</tspan>
-			<tspan x="980" y="453">450</tspan>
-			<tspan x="980" y="503">500</tspan>
-			<tspan x="980" y="553">550</tspan>
-			<tspan x="980" y="603">600</tspan>
-			<tspan x="980" y="653">650</tspan>
-			<tspan x="980" y="703">700</tspan>
+		<text style="text-anchor:end;font-size:10px">
+			<tspan x="750" y="53">50</tspan>
+			<tspan x="750" y="103">100</tspan>
+			<tspan x="750" y="153">150</tspan>
+			<tspan x="750" y="203">200</tspan>
+			<tspan x="750" y="253">250</tspan>
+			<tspan x="750" y="303">300</tspan>
+			<tspan x="750" y="353">350</tspan>
+			<tspan x="750" y="403">400</tspan>
+			<tspan x="750" y="453">450</tspan>
+			<tspan x="750" y="500">500</tspan>
 		</text>
 		<!-- end draw grid -->
 	</g>
@@ -122,13 +114,13 @@ This is an SVG Animation of a plane
 		<rect x="90" y="35" width="30" height="10" class="dash"/>
 	</g>
 	<g id="longRoad">
-		<use xlink:href="#road"/>
-		<use xlink:href="#road" transform="translate(120,0)"/>
-		<use xlink:href="#road" transform="translate(240,0)"/>
-		<use xlink:href="#road" transform="translate(360,0)"/>
-		<use xlink:href="#road" transform="translate(480,0)"/>
-		<use xlink:href="#road" transform="translate(600,0)"/>
-		<use xlink:href="#road" transform="translate(720,0)"/>
+		<use x="0" y="0" xlink:href="#road"/>
+		<use x="119" y="0" xlink:href="#road"/>
+		<use x="237" y="0" xlink:href="#road"/>
+		<use x="356" y="0" xlink:href="#road"/>
+		<use x="474" y="0" xlink:href="#road"/>
+		<use x="593" y="0" xlink:href="#road"/>
+		<use x="712" y="0" xlink:href="#road"/>
 	</g>
 
 	<!-- ============== TREES ============== -->
@@ -340,34 +332,41 @@ This is an SVG Animation of a plane
 		<rect width="10000" height="320"/>
 	</g>
 </defs>
-<!-- ======================================================================== SCENES ======================================================================== -->
+<!--
+	========================================================================================================================
+	======================================================== SCENES ========================================================
+	========================================================================================================================
+ -->
 <g id="display">
 	<rect x="0" y="0" width="750" height="500" style="fill: url(#skyColor)"/>
 	<use xlink:href="#sun" transform="translate(15,15)"/>
 	<use xlink:href="#animatedCloud1" transform="translate(-200)"/>
 	<use xlink:href="#animatedCloud4" transform="translate(-200)"/>
 
-	<g><!-- ======================================================== SCENE 1 ======================================================== -->
+	<!-- ======================================================== SCENE 1 ======================================================== -->
+	<g>
 		<!-- ============== BACKGROUND ============== -->
 		<use y="180" xlink:href="#grass"/>
-		<use x="-20" y="200" xlink:href="#mountains"/>
+		<use x="-20" y="200" xlink:href="#mountains" transform="scale(1.1)"/>
 		<use x="320" y="200" xlink:href="#mountains"/>
-		<use x="150" y="200" xlink:href="#mountains"/>
+		<use x="150" y="200" xlink:href="#mountains" transform="scale(0.9)"/>
 		<use x="670" y="200" xlink:href="#mountains"/>
-		<use x="490" y="200" xlink:href="#mountains"/>
+		<use x="490" y="200" xlink:href="#mountains" transform="scale(0.9)"/>
 		<use x="-30" y="130" xlink:href="#longPineForest"/>
 		<use x="400" y="150" xlink:href="#mountainHouse"/>
 		<use x="0" y="300" xlink:href="#longRoad"/>
 
 		<!-- ============== PLANE ============== -->
+		<!-- <path d="M100,350 h550 c350,00 400,-50 900,-400 q125,-80 300,-50 h500" fill="none" stroke="black" stroke-width="2"/> -->
 		<use x="100" y="250" xlink:href="#Plane">
-			<animateMotion path="M0,0 h550 l50,-10 l50,-25 l50,-50 l50,-75 l50,-100 l50,-125" begin="scene1.begin" dur="10s" fill="freeze"/> <!-- TODO: Use Cubic / Qudratic bezier curves instead of lines  -->
+			<animateMotion path="M0,0 h550 c350,00 400,-50 900,-400 q125,-80 300,-50 h500" begin="scene1.begin" dur="14s" fill="freeze"/>
+			<animateTransform attributeName="transform" type="rotate" values="0;-5;-10;0" begin="scene1.begin" dur="14s" fill="freeze"/>
 		</use>
 
 		<!-- ============== FOREGROUND ============== -->
 		<use xlink:href="#airport" transform="translate(130,350)"/>
 
-		<animateMotion id="scene1" path="M0,0 h-550 l-50,10 l-50,25 l-50,50 l-50,75 l-50,100 l-50,125" begin="indefinite" dur="10s" fill="freeze"/> <!-- TODO: Use Cubic / Qudratic bezier curves instead of lines  -->
+		<animateMotion id="scene1" path="M0,0 h-550 c-350,0 -400,50 -900,400 q-125,80 -300,50 h-500" begin="indefinite" dur="15s" fill="freeze"/> <!-- TODO: Use Cubic / Qudratic bezier curves instead of lines  -->
 	</g>
 
 	<use xlink:href="#animatedCloud2" transform="translate(-200)"/>
