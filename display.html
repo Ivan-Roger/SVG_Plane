@@ -6,25 +6,67 @@
     <link rel="stylesheet" href="handson.css"/>
     <style>
       iframe {
+        width: 750px;
+        height: 500px;
+        border: none;
         margin-right: auto;
         margin-left: auto;
         display: block;
       }
+      button {
+        width: 100px;
+        height: 50px;
+        vertical-align: middle;
+      }
     </style>
   </head>
   <body>
-    <p id="info">Loaded 0 seconds ago.</p>
-    <iframe id="image" src="template.svg" style="width: 750px; height: 500px; border: none;"></iframe>
+    <div>
+      <button id="gridSwicth" onclick="switchGrid()">Hide grid</button>
+      <button onclick="startAnimations()">Start animations</button>
+      <span id="info">Loaded 0 seconds ago.</span>
+    </div>
+    <iframe id="image" src="template.svg"></iframe>
     <script>
       var loaded = Date.now();
-      setInterval(function(){
-        d = Math.trunc((Date.now()-loaded)/1000);
-        document.getElementById('info').innerHTML="Loaded "+d+" seconds ago."
-      },250);
-      document.getElementById('image').addEventListener('mouseover',function(){
-        loaded = Date.now();
-        document.getElementById('image').contentWindow.location.reload();
-      });
+      var grid;
+
+      function startAnimations() {
+        var doc = document.getElementById('image').contentWindow.document;
+        doc.getElementById('scene1').beginElement();
+      }
+      function setGrid(disp) {
+        if (disp!==undefined)
+          grid = disp;
+        if (grid) {
+          document.getElementById('image').contentDocument.getElementById('gridDisplay').style.display="none";
+          document.getElementById('gridSwicth').innerHTML="Show grid";
+        } else {
+          document.getElementById('image').contentDocument.getElementById('gridDisplay').style.display="block";
+          document.getElementById('gridSwicth').innerHTML="Hide grid";
+        }
+      }
+      function switchGrid() {
+        setGrid(!grid);
+      }
+
+      function init() {
+        setGrid(true);
+        document.getElementById('gridSwicth').addEventListener('onclick',switchGrid);
+        setInterval(function(){
+          d = Math.trunc((Date.now()-loaded)/1000);
+          document.getElementById('info').innerHTML="Loaded "+d+" seconds ago."
+        },250);
+        document.getElementById('image').addEventListener('mouseover',function(){
+          loaded = Date.now();
+          document.getElementById('image').contentWindow.location.reload();
+          setTimeout(function(){
+            setGrid(true);
+          },50);
+        });
+      }
+
+      init();
     </script>
   </body>
 </html>

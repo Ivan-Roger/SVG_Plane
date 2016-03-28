@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet href="handson.css" type="text/css"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="750" viewBox="0 0 1000 750" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect class="background" x="0" y="0" width="1000" height="750"/>
+
+
+<!-- draw background grid -->
+<path class="thin" style="stroke-opacity:0.2" d="M0,0 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10h1000v10h-1000v10 h1000v10h-1000v10 h1000v-780h-1000v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750h10v-750h10v750 h10v-750h10v750"/>
+<path class="outline" style="stroke-opacity:0.2" d="M0,0 h1000v50h-1000v50h1000v50h-1000v50  h1000v50h-1000v50h1000v50h-1000v50 h1000v50h-1000v50h1000v50h-1000v50 h1000v50h-1000v50h1000v50h-1000 h1000v-750h-1000v750 h50v-750h50v750h50v-750h50v750 h50v-750h50v750h50v-750h50v750 h50v-750h50v750h50v-750h50v750 h50v-750h50v750h50v-750h50v750 h50v-750h50v750h50v-750h50v750 h50v-750h50v750h50v-750h50v750 h50v-750h50v750h50v-750h50v750 "/>
+<text x="0" style="text-anchor:middle;font-size:10px">
+<tspan x="50" y="10">50</tspan>
+<tspan x="100" y="10">100</tspan>
+<tspan x="150" y="10">150</tspan>
+<tspan x="200" y="10">200</tspan>
+<tspan x="250" y="10">250</tspan>
+<tspan x="300" y="10">300</tspan>
+<tspan x="350" y="10">350</tspan>
+<tspan x="400" y="10">400</tspan>
+<tspan x="450" y="10">450</tspan>
+<tspan x="500" y="10">500</tspan>
+<tspan x="550" y="10">550</tspan>
+<tspan x="600" y="10">600</tspan>
+<tspan x="650" y="10">650</tspan>
+<tspan x="700" y="10">700</tspan>
+<tspan x="750" y="10">750</tspan>
+<tspan x="800" y="10">800</tspan>
+<tspan x="850" y="10">850</tspan>
+<tspan x="900" y="10">900</tspan>
+<tspan x="950" y="10">950</tspan>
+</text>
+<text style="text-anchor:start;font-size:10px">
+<tspan x="980" y="53">50</tspan>
+<tspan x="980" y="103">100</tspan>
+<tspan x="980" y="153">150</tspan>
+<tspan x="980" y="203">200</tspan>
+<tspan x="980" y="253">250</tspan>
+<tspan x="980" y="303">300</tspan>
+<tspan x="980" y="353">350</tspan>
+<tspan x="980" y="403">400</tspan>
+<tspan x="980" y="453">450</tspan>
+<tspan x="980" y="503">500</tspan>
+<tspan x="980" y="553">550</tspan>
+<tspan x="980" y="603">600</tspan>
+<tspan x="980" y="653">650</tspan>
+<tspan x="980" y="703">700</tspan>
+
+</text>
+<!-- end draw grid  -->
+
+  <defs>
+    <path id="Fuselage" d="
+      m0,0
+      l20,-5
+      l60,50
+      q275-20 275,-15
+      q20,10 48,15
+      q35,18 -24,40
+      l-114,11
+      q-22,7 -36,6
+      q-40,-2 -55,-3
+      l-86,-6
+      q-80,-15 -80,-25
+      q0,-10 20,-20 z"/>
+
+    <path id="PilotWindow" d="
+      m0,0
+      q-10,5 -20,8
+      l2,10
+      q10,-5 27,-14z"/>
+
+    <rect id="PassengerWindow" height="5" width="5"/>
+
+    <g id="PassengerWindowGroup">
+      <use x="0" y="0" xlink:href="#PassengerWindow"/>
+      <use x="10" y="0" xlink:href="#PassengerWindow"/>
+      <use x="20" y="0" xlink:href="#PassengerWindow"/>
+      <use x="30" y="0" xlink:href="#PassengerWindow"/>
+      <use x="40" y="0" xlink:href="#PassengerWindow"/>
+      <use x="50" y="0" xlink:href="#PassengerWindow"/>
+      <use x="60" y="0" xlink:href="#PassengerWindow"/>
+      <use x="70" y="0" xlink:href="#PassengerWindow"/>
+    </g>
+
+    <path id="Door" d="
+      m0,0
+      l-1.5,15
+      l1.5,15
+      l15,-2
+      l-1.5,-15
+      l1.5,-15z"/>
+
+    <g id="PlaneBody">
+      <use x="0" y="0" xlink:href="#Fuselage"/>
+      <use x="383" y="40" xlink:href="#PilotWindow"/>
+      <use x="240" y="80" xlink:href="#PassengerWindowGroup" transform="rotate(-4)"/>
+      <use x="335" y="45" xlink:href="#Door"/>
+      <use x="120" y="75" xlink:href="#PassengerWindowGroup" transform="rotate(-3)"/>
+      <use x="215" y="53" xlink:href="#Door"/>
+      <use x="115" y="70" xlink:href="#Door" transform="scale(0.85)"/>
+    </g>
+
+    <path id="RightWing" d="
+      m0,0
+      q-8,10 -15,20
+      l-80,60
+      q15,10 120,-60
+      q17,-13 35,-25
+      q-10,-5 -60,5 "/>
+
+    <g id="2Motor">
+      <path d="
+        m0,0
+        q40,-20 60-12
+        q7,12 0,24
+        q-20,7 -60,-4"/>
+      <ellipse id="Motor6" cx="56" cy="0" rx="5" ry="10"/>
+      <ellipse id="Motor5" cx="56" cy="0" rx="5" ry="10"/>
+    </g>
+
+    <g id="RightWingMotor">
+      <use x="-5" y="30" xlink:href="#2Motor"/>
+      <use x="0" y="0" xlink:href="#RightWing"/>
+    </g>
+
+    <path id="LeftWing" d="
+      m0,0
+      q3,-35  1,-60
+      l15,5
+      q12,40 20,60"/>
+
+    <path id="RightBackWing" d="
+      m0,0
+      q-15,10 -30,20
+      l15,-2
+      q30,-13 45,-20
+      q-10,-5 -30,2"/>
+
+    <path id="LeftBackWing" d="
+      m0,0
+      l2,-5
+      l10,2
+      l2,15"/>
+
+    <g id="Plane">
+      <use x="220" y="40" xlink:href="#LeftWing"/>
+      <use x="50" y="20" xlink:href="#LeftBackWing"/>
+      <use x="0" y="0" xlink:href="#PlaneBody"/>
+      <use x="210" y="95" xlink:href="#RightWingMotor"/>
+      <use x="30" y="70" xlink:href="#RightBackWing"/>
+    </g>
+
+  </defs>
+
+	 <use x="50" y="50" xlink:href="#Plane"/>
+
+
+
+</svg>

@@ -213,6 +213,108 @@ This is an SVG Animation of a plane
 		</use>
 	</g>
 
+	<!-- ============== SIDE PLANE ============== -->
+	<path id="Fuselage" d="
+		m0,0
+		l20,-5
+		l60,50
+		q275-20 275,-15
+		q20,10 48,15
+		q35,18 -24,40
+		l-114,11
+		q-22,7 -36,6
+		q-40,-2 -55,-3
+		l-86,-6
+		q-80,-15 -80,-25
+		q0,-10 20,-20 z"/>
+
+	<path id="PilotWindow" d="
+		m0,0
+		q-10,5 -20,8
+		l2,10
+		q10,-5 27,-14z"/>
+
+	<rect id="PassengerWindow" height="5" width="5"/>
+
+	<g id="PassengerWindowGroup">
+		<use x="0" y="0" xlink:href="#PassengerWindow"/>
+		<use x="10" y="0" xlink:href="#PassengerWindow"/>
+		<use x="20" y="0" xlink:href="#PassengerWindow"/>
+		<use x="30" y="0" xlink:href="#PassengerWindow"/>
+		<use x="40" y="0" xlink:href="#PassengerWindow"/>
+		<use x="50" y="0" xlink:href="#PassengerWindow"/>
+		<use x="60" y="0" xlink:href="#PassengerWindow"/>
+		<use x="70" y="0" xlink:href="#PassengerWindow"/>
+	</g>
+
+	<path id="Door" d="
+		m0,0
+		l-1.5,15
+		l1.5,15
+		l15,-2
+		l-1.5,-15
+		l1.5,-15z"/>
+
+	<g id="PlaneBody">
+		<use x="0" y="0" xlink:href="#Fuselage"/>
+		<use x="383" y="40" xlink:href="#PilotWindow"/>
+		<use x="240" y="80" xlink:href="#PassengerWindowGroup" transform="rotate(-4)"/>
+		<use x="335" y="45" xlink:href="#Door"/>
+		<use x="120" y="75" xlink:href="#PassengerWindowGroup" transform="rotate(-3)"/>
+		<use x="215" y="53" xlink:href="#Door"/>
+		<use x="115" y="70" xlink:href="#Door" transform="scale(0.85)"/>
+	</g>
+
+	<path id="RightWing" d="
+		m0,0
+		q-8,10 -15,20
+		l-80,60
+		q15,10 120,-60
+		q17,-13 35,-25
+		q-10,-5 -60,5 "/>
+
+	<g id="2Motor">
+		<path d="
+			m0,0
+			q40,-20 60-12
+			q7,12 0,24
+			q-20,7 -60,-4"/>
+		<ellipse id="Motor6" cx="56" cy="0" rx="5" ry="10"/>
+		<ellipse id="Motor5" cx="56" cy="0" rx="5" ry="10"/>
+	</g>
+
+	<g id="RightWingMotor">
+		<use x="-5" y="30" xlink:href="#2Motor"/>
+		<use x="0" y="0" xlink:href="#RightWing"/>
+	</g>
+
+	<path id="LeftWing" d="
+		m0,0
+		q3,-35  1,-60
+		l15,5
+		q12,40 20,60"/>
+
+	<path id="RightBackWing" d="
+		m0,0
+		q-15,10 -30,20
+		l15,-2
+		q30,-13 45,-20
+		q-10,-5 -30,2"/>
+
+	<path id="LeftBackWing" d="
+		m0,0
+		l2,-5
+		l10,2
+		l2,15"/>
+
+	<g id="Plane">
+		<use x="220" y="40" xlink:href="#LeftWing"/>
+		<use x="50" y="20" xlink:href="#LeftBackWing"/>
+		<use x="0" y="0" xlink:href="#PlaneBody"/>
+		<use x="210" y="95" xlink:href="#RightWingMotor"/>
+		<use x="30" y="70" xlink:href="#RightBackWing"/>
+	</g>
+
 	<!-- ============== AIRPORT ============== -->
 	<g id="controlTower">
 		<rect x="20" y="45" width="30" height="70" class="base"/>
@@ -238,7 +340,8 @@ This is an SVG Animation of a plane
 		<rect width="10000" height="320"/>
 	</g>
 </defs>
-<g>
+<!-- ======================================================================== SCENES ======================================================================== -->
+<g id="display">
 	<rect x="0" y="0" width="750" height="500" style="fill: url(#skyColor)"/>
 	<use xlink:href="#sun" transform="translate(15,15)"/>
 	<use xlink:href="#animatedCloud1" transform="translate(-200)"/>
@@ -247,21 +350,24 @@ This is an SVG Animation of a plane
 	<g><!-- ======================================================== SCENE 1 ======================================================== -->
 		<!-- ============== BACKGROUND ============== -->
 		<use y="180" xlink:href="#grass"/>
-		<use xlink:href="#mountains" transform="translate(-20,200)"/>
-		<use xlink:href="#mountains" transform="translate(320,200)"/>
-		<use xlink:href="#mountains" transform="translate(150,200)"/>
-		<use xlink:href="#mountains" transform="translate(670,200)"/>
-		<use xlink:href="#mountains" transform="translate(490,200)"/>
-		<use xlink:href="#longPineForest" transform="translate(-30,130)"/>
-		<use xlink:href="#mountainHouse" transform="translate(400,150)"/>
-		<use xlink:href="#longRoad" transform="translate(0,300)"/>
+		<use x="-20" y="200" xlink:href="#mountains"/>
+		<use x="320" y="200" xlink:href="#mountains"/>
+		<use x="150" y="200" xlink:href="#mountains"/>
+		<use x="670" y="200" xlink:href="#mountains"/>
+		<use x="490" y="200" xlink:href="#mountains"/>
+		<use x="-30" y="130" xlink:href="#longPineForest"/>
+		<use x="400" y="150" xlink:href="#mountainHouse"/>
+		<use x="0" y="300" xlink:href="#longRoad"/>
 
 		<!-- ============== PLANE ============== -->
+		<use x="100" y="250" xlink:href="#Plane">
+			<animateMotion path="M0,0 h550 l50,-10 l50,-25 l50,-50 l50,-75 l50,-100 l50,-125" begin="scene1.begin" dur="10s" fill="freeze"/> <!-- TODO: Use Cubic / Qudratic bezier curves instead of lines  -->
+		</use>
 
 		<!-- ============== FOREGROUND ============== -->
 		<use xlink:href="#airport" transform="translate(130,350)"/>
 
-		<animateTransform id="scene1" attributeName="transform" type="translate" values="0,0;-100,0;-200,0;-300,0;-400,0;-500,10;-600,20;-700,50;-800,90;-900,140;-1000,200;-1100,270;-1200,350;" begin="2s" dur="10s" fill="freeze"/>
+		<animateMotion id="scene1" path="M0,0 h-550 l-50,10 l-50,25 l-50,50 l-50,75 l-50,100 l-50,125" begin="indefinite" dur="10s" fill="freeze"/> <!-- TODO: Use Cubic / Qudratic bezier curves instead of lines  -->
 	</g>
 
 	<use xlink:href="#animatedCloud2" transform="translate(-200)"/>
@@ -269,6 +375,6 @@ This is an SVG Animation of a plane
 	<rect width="100%" height="100%" id="storm">
 		<animate attributeType="css" attributeName="opacity" values="0;0.9;0;0;0;0;0.9;0;0.9;0" begin="scene1.end" dur="0.4s"/>
 	</rect>
-	<!-- <use xlink:href="#grid"/> -->
+	<use id="gridDisplay" xlink:href="#grid"/>
 </g>
 </svg>
