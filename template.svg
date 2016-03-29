@@ -412,4 +412,29 @@ This is an SVG Animation of a plane
 	</rect>
 	<use id="gridDisplay" xlink:href="#grid"/>
 </g>
+
+	<g id='Palmtree'>
+		<path id="PalmTrunk" d="
+			m0,0
+			q-10,-40 60,-200
+			h15
+			q-55,135 -40,200
+			q-10,5 -37,0"/>
+
+		<path id="PalmLeaves" d="
+			m70,-195
+			q20,40 24,85
+			q20,-40 -10,-85
+			q33,33 55,71
+			q0,-55 -55,-80
+			q26,6 40,13
+			q-15,-25 -46,-27
+			q-10,-15 -10,-1
+			q-30,-40 -53,-27
+			q23,10 42,24
+			q-68,-22 -96,17
+			q42,-16 85,-8
+			q-73,33 -66,89
+			q33,-49 83,-73"/>
+	</g>
 </svg>
