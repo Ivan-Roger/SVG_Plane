@@ -63,8 +63,8 @@
 #mountainHouse .roof {fill: #082F3D;}
 #mountainHouse .cheminey {fill: #452C13;}
 
-.lightCloud #cloud path {fill: rgba(153, 170, 255, 0.85);}
-.darkCloud #cloud path {fill: rgba(68, 85, 133, 0.90);}
+.lightCloud {fill: rgba(153, 170, 255, 0.85);}
+.darkCloud {fill: rgba(68, 85, 133, 0.90);}
 
 #controlTower .base {fill: #7F8C90;}
 #controlTower .window {fill: #2A4675;}
@@ -76,6 +76,10 @@
 #skyColor .end {stop-color: #2B57BA;}
 
 #grass rect {fill: #469931;}
+
+#sand rect {fill: #C7B217;}
+
+#sea {fill: #0C80B0;}
 
 #storm {
   fill: #C7ECF2;
