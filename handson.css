@@ -9,7 +9,7 @@
 #Motor3 {stroke: black; stroke-width:3}
 /* Style sheet for the handson event */
 
-#Plane{stroke:black; fill:#E0EBE2}
+#Plane1 {stroke:black; fill:#E0EBE2}
 
 /* Plane of the first scene */
 #MiddleLine,#LittleLines {fill:none}
@@ -25,6 +25,12 @@
 #WalkBridge {fill:#BFB5A4; stroke:#BFB5A4; stroke-width:3}
 #Glass {fill:#E3EBE2; fill-opacity:0.6}
 #BetweenPlaneAndBridge {fill:#BFB5A4; stroke:black; stroke-width:1}
+
+/* Characters of the first scene */
+#Guy1 {fill:#A89E3F}
+#Guy2 {fill:#6E2FA8}
+#Guy3 {fill:#136B21}
+#Guy4 {fill:#542A00}
 
 /* Plane of the second scene */
 #PilotWindow {fill:#2A4675}
@@ -77,7 +83,7 @@
 
 #grass rect {fill: #469931;}
 
-#sand rect {fill: #C7B217;}
+#sand {fill: #C7B217;}
 
 #sea {fill: #0C80B0;}
 
@@ -85,6 +91,9 @@
   fill: #C7ECF2;
   opacity: 0;
 }
+
+#PalmLeaves { fill: #0D540D; stroke: #0A420A; stroke-width: 1;}
+#PalmTrunk { fill: #5E3F1A; }
 
 #grid rect.background {fill:#eeeeff;stroke:none}
 #grid .outline {stroke:black; fill:none; stroke-width:3}

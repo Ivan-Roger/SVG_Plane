@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet href="handson.css" type="text/css"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="500" viewBox="0 0 750 500" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <!-- Plane of the first scene -->
+  <defs>
+  	<g id="SideWing">
+  		<path d="
+  			m0,20
+  			q275,-20 450,0
+  			q-20,8 -15,60
+  			q-265,-55 -445,-45
+  			q-15,0 10,-17z
+  			" />
+
+  		<path id="MiddleLine" d="
+  			m0,25
+  			q175,-20 437,15" />
+
+  		<!-- Little lines on the down part of the wing -->
+  		<path id="LittleLines" d="
+  			m300,25
+  			q-13,20 -15,27
+  			m-100,-12
+  			q-0,-20 3,-22
+  			m-3,0
+  			q-7,20 -6,22
+  			m-178-15
+  			q-5,-0 -1,10" />
+  	</g>
+
+  	<g id="Motor">
+  		<circle id="Motor1" cx="3" cy="1" r="35" />
+  		<circle id="Motor2" cx="0" cy="0" r="27" />
+  		<circle id="Motor3" cx="0" cy="0" r="17" />
+  		<circle id="Motor4" cx="0" cy="0" r="17" />
+  	</g>
+
+  	<g id="WingAndMotor">
+  	<use x="240" y="64" xlink:href="#Motor"/>
+  		<use x="0" y="0" xlink:href="#SideWing"/>
+  	</g>
+
+  	<path id="Fuselage" d="
+  		m0,0
+  		q-4,-52 15,-60
+  		q20,-100 100,-120
+  		q80,0 100,120
+  		q20,8 15,60
+  		q-5,20 -115,20
+  		q-110,0 -115,-20"/>
+
+  	<g id="BackWing">
+  		<path d="
+  			m0,0
+  			q-115,-5 -280 -30
+  			l2,-8
+  			l-25,-8
+  			q125,15 290,25 z"/>
+
+  		<path d="
+  			m-6,-10
+  			q-115,-5 -272,-27"/>
+  	</g>
+
+  	<g id="UpperWing">
+  		<path d="
+  			m0,0
+  			q-5,-165 10,-360
+  			q15,175 15,360			" />
+
+  		<path d="
+  			m10,0
+  			q-5,-165 0,-360" />
+  	</g>
+
+  	<g id="PlaneBody">
+  		<use x="50" y="-100" xlink:href="#BackWing"/>
+  		<use x="-185" y="-100" xlink:href="#BackWing" transform="scale(-1,1)"/>
+  		<use x="110" y="-180" xlink:href="#UpperWing"/>
+  		<use x="0" y="0" xlink:href="#Fuselage"/>
+  	</g>
+
+  	<path id="Wheel" d="
+  		m0,0
+  		q-5,20 0,40
+  		q5,3 10,0
+  		q5-20 0,-40
+  		q-5,-3 -10,0"/>
+
+  	<g id="LandingGear">
+  		<rect id="Axle1" x="16" y="-20" height="40" width="8"/>
+  		<rect id="Axle2" x="8" y="16" height="8" width="20"/>
+  		<use x="0" y="0" xlink:href="#Wheel"/>
+  		<use x="30" y="0" xlink:href="#Wheel"/>
+  	</g>
+
+  	<g id="Plane">
+  		<use x="0" y="0" xlink:href="#PlaneBody"/>
+  		<use x="-50" y="10" xlink:href="#LandingGear"/>
+  		<use x="242" y="10" xlink:href="#LandingGear"/>
+  		<use x="-434" y="-80" xlink:href="#WingAndMotor"/>
+  		<use x="-664" y="-80" xlink:href="#WingAndMotor" transform="scale(-1,1)"/>
+  	</g>
+  </defs>
+<!-- End plane of the first scene -->
+
+<!-- Plane of the second scene -->
+  <defs>
+    <path id="Fuselage" d="
+      m0,0
+      l20,-5
+      l60,50
+      q275-20 275,-15
+      q20,10 48,15
+      q35,18 -24,40
+      l-114,11
+      q-22,7 -36,6
+      q-40,-2 -55,-3
+      l-86,-6
+      q-80,-15 -80,-25
+      q0,-10 20,-20 z"/>
+
+    <path id="PilotWindow" d="
+      m0,0
+      q-10,5 -20,8
+      l2,10
+      q10,-5 27,-14z"/>
+
+    <rect id="PassengerWindow" height="5" width="5"/>
+
+    <g id="PassengerWindowGroup">
+      <use x="0" y="0" xlink:href="#PassengerWindow"/>
+      <use x="10" y="0" xlink:href="#PassengerWindow"/>
+      <use x="20" y="0" xlink:href="#PassengerWindow"/>
+      <use x="30" y="0" xlink:href="#PassengerWindow"/>
+      <use x="40" y="0" xlink:href="#PassengerWindow"/>
+      <use x="50" y="0" xlink:href="#PassengerWindow"/>
+      <use x="60" y="0" xlink:href="#PassengerWindow"/>
+      <use x="70" y="0" xlink:href="#PassengerWindow"/>
+    </g>
+
+    <path id="Door" d="
+      m0,0
+      l-1.5,15
+      l1.5,15
+      l15,-2
+      l-1.5,-15
+      l1.5,-15z"/>
+
+    <g id="PlaneBody">
+      <use x="0" y="0" xlink:href="#Fuselage"/>
+      <use x="383" y="40" xlink:href="#PilotWindow"/>
+      <use x="240" y="80" xlink:href="#PassengerWindowGroup" transform="rotate(-4)"/>
+      <use x="335" y="45" xlink:href="#Door"/>
+      <use x="120" y="75" xlink:href="#PassengerWindowGroup" transform="rotate(-3)"/>
+      <use x="215" y="53" xlink:href="#Door"/>
+      <use x="115" y="70" xlink:href="#Door" transform="scale(0.85)"/>
+    </g>
+
+    <path id="RightWing" d="
+      m0,0
+      q-8,10 -15,20
+      l-80,60
+      q15,10 120,-60
+      q17,-13 35,-25
+      q-10,-5 -60,5 "/>
+
+    <g id="2Motor">
+      <path d="
+        m0,0
+        q40,-20 60-12
+        q7,12 0,24
+        q-20,7 -60,-4"/>
+      <ellipse id="Motor6" cx="56" cy="0" rx="5" ry="10"/>
+      <ellipse id="Motor5" cx="56" cy="0" rx="5" ry="10"/>
+    </g>
+
+    <g id="RightWingMotor">
+      <use x="-5" y="30" xlink:href="#2Motor"/>
+      <use x="0" y="0" xlink:href="#RightWing"/>
+    </g>
+
+    <path id="LeftWing" d="
+      m0,0
+      q3,-35  1,-60
+      l15,5
+      q12,40 20,60"/>
+
+    <path id="RightBackWing" d="
+      m0,0
+      q-15,10 -30,20
+      l15,-2
+      q30,-13 45,-20
+      q-10,-5 -30,2"/>
+
+    <path id="LeftBackWing" d="
+      m0,0
+      l2,-5
+      l10,2
+      l2,15"/>
+
+    <g id="Plane">
+      <use x="220" y="40" xlink:href="#LeftWing"/>
+      <use x="50" y="20" xlink:href="#LeftBackWing"/>
+      <use x="0" y="0" xlink:href="#PlaneBody"/>
+      <use x="210" y="95" xlink:href="#RightWingMotor"/>
+      <use x="30" y="70" xlink:href="#RightBackWing"/>
+    </g>
+
+  </defs>
+<!-- End plane of the second scene -->
+
+<!-- WalkBridge of the first Scene -->
+<defs>
+  <g id="WalkBridgeWindow">
+    <rect id="Glass" height="50" width="40"/>
+    <g id="Frame">
+      <path d="
+        m0,0
+        l40,50"/>
+      <rect y="-4"  height="4" width="40"/>
+      <rect y="50"  height="50" width="40"/>
+    </g>
+  </g>
+
+  <g id="WalkBridgeWindowGroup">
+    <use x="0" y="0" xlink:href="#WalkBridgeWindow"/>
+    <use x="42" y="0" xlink:href="#WalkBridgeWindow"/>
+    <use x="84" y="0" xlink:href="#WalkBridgeWindow"/>
+    <use x="126" y="0" xlink:href="#WalkBridgeWindow"/>
+    <use x="168" y="0" xlink:href="#WalkBridgeWindow"/>
+    <use x="210" y="0" xlink:href="#WalkBridgeWindow"/>
+  </g>
+
+  <g id="WalkBridge">
+    <use x="0" y="0" xlink:href="#WalkBridgeWindowGroup"/>
+    <use x="250" y="0" xlink:href="#WalkBridgeWindowGroup"/>
+    <path id="BetweenPlaneAndBridge" d="
+      m0,-4
+      q-50,-25 -60,-15
+      q30,50 0,130
+      q10,10 60,-10"/>
+  </g>
+</defs>
+<!-- End WalkBridge of the first Scene-->
+
+<!-- Landscape of the first Scene -->
+<defs>
+	<path id="Marking" d="
+		m0,0
+		l10,-100
+		h20
+		l10,100 z"/>
+
+	<g id="AirStrip">
+		<path id="Road" d="
+			m0,0
+			l150,-750
+			h200
+			l150,750 z"/>
+		<use x="240" y="0" xlink:href="#Marking"/>
+		<use x="300" y="-270" xlink:href="#Marking" transform="scale(0.8,0.8)"/>
+		<use x="345" y="-550" xlink:href="#Marking" transform="scale(0.7,0.7)"/>
+		<use x="370" y="-830" xlink:href="#Marking" transform="scale(0.65,0.65)"/>
+		<use x="485" y="-1350" xlink:href="#Marking" transform="scale(0.5,0.5)"/>
+	</g>
+
+  <g id="guy">
+		<ellipse cx="0" cy="-25" rx="15" ry="25"/>
+		<circle cx="0" cy="-58" r="12" style="fill: pink"/>
+	</g>
+
+</defs>
+<!-- End landscape of the first Scene -->
+
+
+
+<use x="1000" y="1250" xlink:href="#AirStrip" transform="scale(0.4)"/>
+<use id="Guy1" x="1981" y="1120" xlink:href="#guy" transform="scale(0.4)">
+  <animateMotion path="M0,0 h-260" begin="4s" dur="5s"/>
+</use>
+<use id="Guy2" x="1981" y="1120" xlink:href="#guy" transform="scale(0.4)">
+  <animateMotion path="M0,0 h-260" begin="5s" dur="5s"/>
+</use>
+<use id="Guy3" x="1981" y="1120" xlink:href="#guy" transform="scale(0.4)">
+  <animateMotion path="M0,0 h-260" begin="6s" dur="5s"/>
+</use>
+<use id="Guy4" x="1981" y="1120" xlink:href="#guy" transform="scale(0.4)">
+  <animateMotion path="M0,0 h-260" begin="7s" dur="5s"/>
+</use>
+<use x="1981" y="1040" xlink:href="#WalkBridge" transform="scale(0.4)"> <!--1381-->
+  <animateMotion path="M0,0 h-240" begin="0s" dur="3s" fill="freeze"/>
+  <animateMotion path="M-240,0 h240" begin="12s" dur="3s" fill="freeze"/>
+</use>
+<use x="1140" y="1170" xlink:href="#Plane" transform="scale(0.4)"/>
+
+</svg>

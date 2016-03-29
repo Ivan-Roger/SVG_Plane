@@ -78,7 +78,7 @@ This is an SVG Animation of a plane
 
 	<!-- ============== SUN ============== -->
 	<g id="sunLight">
-		<rect transform="rotate(180)" x="0" y="0" width="2" height="19"> <!-- TODO style in CSS -->
+		<rect transform="rotate(180)" x="0" y="0" width="2" height="19">
 			<animate attributeName="height" values="19;13;16;10;19" dur="6s" repeatCount="indefinite"/>
 		</rect>
 	</g>
@@ -256,7 +256,7 @@ This is an SVG Animation of a plane
 	</g>
 
 	<!-- ============== SIDE PLANE ============== -->
-	<path id="Fuselage" d="
+	<path id="Fuselage1" d="
 		m0,0
 		l20,-5
 		l60,50
@@ -297,8 +297,8 @@ This is an SVG Animation of a plane
 		l-1.5,-15
 		l1.5,-15z"/>
 
-	<g id="PlaneBody">
-		<use x="0" y="0" xlink:href="#Fuselage"/>
+	<g id="PlaneBody1">
+		<use x="0" y="0" xlink:href="#Fuselage1"/>
 		<use x="383" y="40" xlink:href="#PilotWindow"/>
 		<use x="240" y="80" xlink:href="#PassengerWindowGroup" transform="rotate(-4)"/>
 		<use x="335" y="45" xlink:href="#Door"/>
@@ -349,10 +349,10 @@ This is an SVG Animation of a plane
 		l10,2
 		l2,15"/>
 
-	<g id="Plane">
+	<g id="Plane1">
 		<use x="220" y="40" xlink:href="#LeftWing"/>
 		<use x="50" y="20" xlink:href="#LeftBackWing"/>
-		<use x="0" y="0" xlink:href="#PlaneBody"/>
+		<use x="0" y="0" xlink:href="#PlaneBody1"/>
 		<use x="210" y="95" xlink:href="#RightWingMotor"/>
 		<use x="30" y="70" xlink:href="#RightBackWing"/>
 	</g>
@@ -400,18 +400,23 @@ This is an SVG Animation of a plane
 	</g>
 
 	<linearGradient id="skyColor" x1="0" y1="0" x2="0" y2="100%">
-    <stop offset="0" class="begin" />
-    <stop offset="100%" class="end" />
+    <stop offset="0" stop-color="#6dacff">
+			<animate attributeName="stop-color" begin="scene1.start" from="#6dacff" to="#FC62A4" dur="26s"/>
+		</stop>
+    <stop offset="100%" stop-color="#2B57BA">
+			<animate attributeName="stop-color" begin="scene1.start" from="#2B57BA" to="#551321" dur="26s"/>
+		</stop>
   </linearGradient>
 
 	<g id="grass">
-		<rect width="2100" height="320"/>
+		<rect width="2100" height="400"/>
 	</g>
 
 	<g id="sea">
 		<rect width="2100" height="320"/>
 	</g>
 
+	<!-- ============== PALMS ============== -->
 	<g id='PalmTree'>
 		<path id="PalmTrunk" d="
 			m0,0
@@ -436,6 +441,177 @@ This is an SVG Animation of a plane
 			q-73,33 -66,89
 			q33,-49 83,-73"/>
 	</g>
+	<g id="PalmForest">
+		<use x="50" y="300" xlink:href="#PalmTree"/>
+		<use x="-40" y="300" xlink:href="#PalmTree" transform="scale(-1,1)"/>
+		<use x="120" y="300" xlink:href="#PalmTree"/>
+		<use x="-192" y="300" xlink:href="#PalmTree" transform="scale(-1,1)"/>
+		<use x="280" y="300" xlink:href="#PalmTree"/>
+		<use x="-260" y="300" xlink:href="#PalmTree" transform="scale(-1,1)"/>
+	</g>
+</defs>
+<!-- Plane of the first scene -->
+<defs>
+	<g id="SideWing">
+		<path d="
+			m0,20
+			q275,-20 450,0
+			q-20,8 -15,60
+			q-265,-55 -445,-45
+			q-15,0 10,-17z
+			" />
+
+		<path id="MiddleLine" d="
+			m0,25
+			q175,-20 437,15" />
+
+		<!-- Little lines on the down part of the wing -->
+		<path id="LittleLines" d="
+			m300,25
+			q-13,20 -15,27
+			m-100,-12
+			q-0,-20 3,-22
+			m-3,0
+			q-7,20 -6,22
+			m-178-15
+			q-5,-0 -1,10" />
+	</g>
+
+	<g id="Motor">
+		<circle id="Motor1" cx="3" cy="1" r="35" />
+		<circle id="Motor2" cx="0" cy="0" r="27" />
+		<circle id="Motor3" cx="0" cy="0" r="17" />
+		<circle id="Motor4" cx="0" cy="0" r="17" />
+	</g>
+
+	<g id="WingAndMotor">
+	<use x="240" y="64" xlink:href="#Motor"/>
+		<use x="0" y="0" xlink:href="#SideWing"/>
+	</g>
+
+	<path id="Fuselage" d="
+		m0,0
+		q-4,-52 15,-60
+		q20,-100 100,-120
+		q80,0 100,120
+		q20,8 15,60
+		q-5,20 -115,20
+		q-110,0 -115,-20"/>
+
+	<g id="BackWing">
+		<path d="
+			m0,0
+			q-115,-5 -280 -30
+			l2,-8
+			l-25,-8
+			q125,15 290,25 z"/>
+
+		<path d="
+			m-6,-10
+			q-115,-5 -272,-27"/>
+	</g>
+
+	<g id="UpperWing">
+		<path d="
+			m0,0
+			q-5,-165 10,-360
+			q15,175 15,360			" />
+
+		<path d="
+			m10,0
+			q-5,-165 0,-360" />
+	</g>
+
+	<g id="PlaneBody">
+		<use x="50" y="-100" xlink:href="#BackWing"/>
+		<use x="-185" y="-100" xlink:href="#BackWing" transform="scale(-1,1)"/>
+		<use x="110" y="-180" xlink:href="#UpperWing"/>
+		<use x="0" y="0" xlink:href="#Fuselage"/>
+	</g>
+
+	<path id="Wheel" d="
+		m0,0
+		q-5,20 0,40
+		q5,3 10,0
+		q5-20 0,-40
+		q-5,-3 -10,0"/>
+
+	<g id="LandingGear">
+		<rect id="Axle1" x="16" y="-20" height="40" width="8"/>
+		<rect id="Axle2" x="8" y="16" height="8" width="20"/>
+		<use x="0" y="0" xlink:href="#Wheel"/>
+		<use x="30" y="0" xlink:href="#Wheel"/>
+	</g>
+
+	<g id="Plane">
+		<use x="0" y="0" xlink:href="#PlaneBody"/>
+		<use x="-50" y="10" xlink:href="#LandingGear"/>
+		<use x="242" y="10" xlink:href="#LandingGear"/>
+		<use x="-434" y="-80" xlink:href="#WingAndMotor"/>
+		<use x="-664" y="-80" xlink:href="#WingAndMotor" transform="scale(-1,1)"/>
+	</g>
+</defs>
+<!-- End plane of the first scene -->
+<!-- WalkBridge of the first Scene -->
+<defs>
+  <g id="WalkBridgeWindow">
+    <rect id="Glass" height="50" width="40"/>
+    <g id="Frame">
+      <path d="
+        m0,0
+        l40,50"/>
+      <rect y="-4"  height="4" width="40"/>
+      <rect y="50"  height="50" width="40"/>
+    </g>
+  </g>
+
+  <g id="WalkBridgeWindowGroup">
+    <use x="0" y="0" xlink:href="#WalkBridgeWindow"/>
+    <use x="42" y="0" xlink:href="#WalkBridgeWindow"/>
+    <use x="84" y="0" xlink:href="#WalkBridgeWindow"/>
+    <use x="126" y="0" xlink:href="#WalkBridgeWindow"/>
+    <use x="168" y="0" xlink:href="#WalkBridgeWindow"/>
+    <use x="210" y="0" xlink:href="#WalkBridgeWindow"/>
+  </g>
+
+  <g id="WalkBridge">
+    <use x="0" y="0" xlink:href="#WalkBridgeWindowGroup"/>
+    <use x="250" y="0" xlink:href="#WalkBridgeWindowGroup"/>
+    <path id="BetweenPlaneAndBridge" d="
+      m0,-4
+      q-50,-25 -60,-15
+      q30,50 0,130
+      q10,10 60,-10"/>
+  </g>
+</defs>
+<!-- End WalkBridge of the first Scene-->
+
+<!-- Landscape of the first Scene -->
+<defs>
+	<path id="Marking" d="
+		m0,0
+		l10,-100
+		h20
+		l10,100 z"/>
+
+	<g id="AirStrip">
+		<path id="Road" d="
+			m0,0
+			l150,-750
+			h200
+			l150,750 z"/>
+		<use x="240" y="0" xlink:href="#Marking"/>
+		<use x="300" y="-270" xlink:href="#Marking" transform="scale(0.8,0.8)"/>
+		<use x="345" y="-550" xlink:href="#Marking" transform="scale(0.7,0.7)"/>
+		<use x="370" y="-830" xlink:href="#Marking" transform="scale(0.65,0.65)"/>
+		<use x="485" y="-1350" xlink:href="#Marking" transform="scale(0.5,0.5)"/>
+	</g>
+
+  <g id="guy">
+		<ellipse cx="0" cy="-25" rx="15" ry="25"/>
+		<circle cx="0" cy="-58" r="12" style="fill: pink"/>
+	</g>
+
 </defs>
 <!--
 	========================================================================================================================
@@ -443,99 +619,154 @@ This is an SVG Animation of a plane
 	========================================================================================================================
  -->
 <g id="display">
-	<rect x="0" y="0" width="750" height="500" style="fill: url(#skyColor)"/>
-	<use x="15" y="15" xlink:href="#sun">
-		<animate attributeType="css" attributeName="opacity" from="1" to="0" begin="scene2Start.begin" dur="0.5s" />
-		<animate attributeType="css" attributeName="opacity" from="0" to="1" begin="scene2End.begin" dur="1s" />
-		<animateTransform attributeType="XML" attributeName="transform" type="translate" from="0" to="730" begin="scene1.begin" dur="26s" fill="freeze" />
-	</use>
 
 	<g>
-		<!-- ============== BACKGROUND - SCENE 1 ============== -->
-		<use y="180" xlink:href="#grass"/>
-		<use xlink:href="#animatedCloud8"/>
-		<use x="-20" y="200" xlink:href="#mountains" transform="scale(1.1)"/>
-		<use x="320" y="200" xlink:href="#mountains"/>
-		<use xlink:href="#animatedCloud1"/>
-		<use x="150" y="200" xlink:href="#mountains" transform="scale(0.9)"/>
-		<use x="670" y="200" xlink:href="#mountains"/>
-		<use x="490" y="200" xlink:href="#mountains" transform="scale(0.9)"/>
-		<use xlink:href="#animatedCloud4"/>
-		<use x="830" y="200" xlink:href="#mountains"/>
-		<use x="900" y="180" xlink:href="#mountains" transform="scale(1.2)"/>
-		<use x="1300" y="200" xlink:href="#mountains"/>
-		<use xlink:href="#animatedCloud9"/>
-		<use x="1560" y="200" xlink:href="#mountains"/>
-		<use x="1720" y="200" xlink:href="#mountains"/>
-		<use x="2120" y="200" xlink:href="#mountains" transform="scale(0.9)"/>
-		<use x="-30" y="130" xlink:href="#longPineForest"/>
-		<use x="750" y="130" xlink:href="#longPineForest"/>
-		<use x="1500" y="130" xlink:href="#longPineForest"/>
-		<use x="400" y="150" xlink:href="#mountainHouse"/>
-		<use x="0" y="300" xlink:href="#longRoad"/>
-		<g transform="translate(1650,250)"><use xlink:href="#seesaw" transform="scale(0.4)"/></g>
+		<rect x="0" y="0" width="750" height="500" style="fill: url(#skyColor)"/>
+		<use x="15" y="15" xlink:href="#sun">
+			<animate attributeType="css" attributeName="opacity" from="1" to="0" begin="scene2Start.begin" dur="0.5s" />
+			<animate attributeType="css" attributeName="opacity" from="0" to="1" begin="scene2End.begin" dur="1s" />
+			<animateTransform attributeType="XML" attributeName="transform" type="translate" values="0,15;315,0;730,15" begin="scene1.begin" dur="26s" fill="freeze" />
+		</use>
 
-		<!-- ============== BACKGROUND - SCENE 2 ============== -->
-		<g transform="translate(3000,0)">
-			<use y="180" xlink:href="#sea"/>
+		<g>
+			<!-- ============== BACKGROUND - SCENE 1 ============== -->
+			<use y="180" xlink:href="#grass"/>
+			<use xlink:href="#animatedCloud8"/>
+			<use x="-20" y="200" xlink:href="#mountains" transform="scale(1.1)"/>
+			<use x="320" y="200" xlink:href="#mountains"/>
+			<use xlink:href="#animatedCloud1"/>
+			<use x="150" y="200" xlink:href="#mountains" transform="scale(0.9)"/>
+			<use x="670" y="200" xlink:href="#mountains"/>
+			<use x="490" y="200" xlink:href="#mountains" transform="scale(0.9)"/>
+			<use xlink:href="#animatedCloud4"/>
+			<use x="830" y="200" xlink:href="#mountains"/>
+			<use x="900" y="180" xlink:href="#mountains" transform="scale(1.2)"/>
+			<use x="1300" y="200" xlink:href="#mountains"/>
+			<use xlink:href="#animatedCloud9"/>
+			<use x="1560" y="200" xlink:href="#mountains"/>
+			<use x="1720" y="200" xlink:href="#mountains"/>
+			<use x="2120" y="200" xlink:href="#mountains" transform="scale(0.9)"/>
+			<use x="-30" y="130" xlink:href="#longPineForest"/>
+			<use x="750" y="130" xlink:href="#longPineForest"/>
+			<use x="1500" y="130" xlink:href="#longPineForest"/>
+			<use x="400" y="150" xlink:href="#mountainHouse"/>
+			<use x="0" y="300" xlink:href="#longRoad"/>
+			<g transform="translate(1650,250)"><use xlink:href="#seesaw" transform="scale(0.4)"/></g>
+
+			<!-- ============== BACKGROUND - SCENE 2 ============== -->
+			<g transform="translate(3000,0)">
+				<use y="140" xlink:href="#sea"/>
+				<rect id="sand" x="0" y="180" width="2100" height="320"/>
+				<use x="1200" y="300" xlink:href="#PalmForest" transform="scale(0.4)"/>
+				<use x="1800" y="325" xlink:href="#PalmForest" transform="scale(0.4)"/>
+				<use x="2400" y="310" xlink:href="#PalmForest" transform="scale(0.4)"/>
+				<use x="2800" y="345" xlink:href="#PalmForest" transform="scale(0.4)"/>
+				<use x="3200" y="325" xlink:href="#PalmForest" transform="scale(0.4)"/>
+				<use x="3700" y="310" xlink:href="#PalmForest" transform="scale(0.4)"/>
+				<use x="4300" y="330" xlink:href="#PalmForest" transform="scale(0.4)"/>
+				<use x="300" y="300" xlink:href="#longRoad"/>
+			</g>
+
+			<!-- ============== PLANE ============== -->
+			<use id="planeUse" x="100" y="250" xlink:href="#Plane1">
+				<animateMotion path="M0,0 h550 c350,00 400,-50 900,-400 q200,-160 300,-150 h50" begin="scene1.begin" dur="11s" fill="freeze"/>
+				<animateTransform attributeName="transform" type="rotate" values="0;-5;-10;0" begin="scene1.begin" dur="11s" fill="freeze"/>
+				<animateTransform attributeName="transform" type="rotate" values="0;10;5;0" begin="scene3.begin" dur="11s" fill="freeze"/>
+
+				<animateMotion path="M1800,-550 h500" begin="scene2.begin" dur="4s" fill="freeze"/>
+				<animateTransform id="turb1" attributeType="XML" type="translate" values="0,0;0,10;0,0" begin="scene2Start.end" dur="0.5s" attributeName="transform"/>
+				<animateTransform id="turb2" attributeType="XML" type="translate" values="0,0;5,5;0,0" begin="stormPause.end" dur="0.5s" attributeName="transform"/>
+				<animateTransform id="turb3" attributeType="XML" type="translate" values="0,0;-5,10;0,0" begin="stormPause2.end" dur="0.5s" attributeName="transform"/>
+
+				<animateMotion path="M2300,-550 h50 c350,00 400,50 900,400 q200,160 300,150 h500" begin="scene3.begin" dur="11s" fill="freeze"/>
+			</use>
+			<!-- <path d="M100,250 h550 c350,00 400,-50 900,-400 q200,-160 300,-150 h50" stroke="black" fill="none" stroke-width="2"/> -->
+			<!-- <path d="M1900,-300 h500" stroke="black" fill="none" stroke-width="2"/> -->
+			<!-- <path d="M2400,-300 h50 c350,00 400,50 900,400 q200,160 300,150 h500" stroke="black" fill="none" stroke-width="2"/> -->
+
+			<!-- ============== FOREGROUND - SCENE 1 ============== -->
+			<use xlink:href="#animatedCloud2"/>
+			<use xlink:href="#animatedCloud6"/>
+			<use xlink:href="#animatedCloud5"/>
+			<use xlink:href="#animatedCloud3"/>
+			<use xlink:href="#animatedCloud7"/>
+			<use x="130" y="350" xlink:href="#airport"/>
+
+			<!-- ============== FOREGROUND - SCENE 2 ============== -->
+			<g transform="translate(3000,0)">
+				<use x="2200" y="785" xlink:href="#PalmForest" transform="scale(0.4)"/>
+				<use x="2630" y="845" xlink:href="#PalmForest" transform="scale(0.4)"/>
+				<use x="3290" y="755" xlink:href="#PalmForest" transform="scale(0.4)"/>
+				<use x="1540" y="330" xlink:href="#airport"/>
+			</g>
+
+			<animateTransform id="scene1Start" begin="scene0End.end" dur="4s" type="translate" attributeType="XML" attributeName="transform"/>
+			<animateMotion id="scene1" path="M0,0 h-550 c-350,0 -400,50 -900,400 q-200,160 -300,150 h-50" begin="scene1Start.end" dur="11s" fill="freeze"/>
+			<animateMotion id="scene2" path="M-1800,550 h-500" begin="scene1.end" dur="4s" fill="freeze"/>
+			<animateMotion id="scene3" path="M-2300,550 h-50 c-350,0 -400,-50 -900,-400 q-200,-160 -300,-150 h-500" begin="scene2.end" dur="11s" fill="freeze"/>
 		</g>
 
-		<!-- ============== PLANE ============== -->
-		<use id="planeUse" x="100" y="250" xlink:href="#Plane">
-			<animateMotion path="M0,0 h550 c350,00 400,-50 900,-400 q200,-160 300,-150 h50" begin="scene1.begin" dur="11s" fill="freeze"/>
-			<animateTransform attributeName="transform" type="rotate" values="0;-5;-10;0" begin="scene1.begin" dur="11s" fill="freeze"/>
+		<!-- ============== CLOUDS - SCENE 2 ============== -->
+		<g transform="translate(0,-200)">
+			<use x="-200" y="10" xlink:href="#darkClouds"/>
+			<use x="0" y="-10" xlink:href="#darkClouds"/>
+			<use x="500" y="20" xlink:href="#darkClouds"/>
+			<animate id="scene2Start" attributeType="css" attributeName="opacity" values="0;1" begin="scene2.begin" dur="2s" fill="freeze"/>
+			<animateTransform attributeName="transform" type="translate" values="0,-200;0,-30" begin="scene2Start.begin" dur="2s" fill="freeze"/>
+			<animateTransform id="stormStart" begin="scene2Start.end" dur="0.5s" type="translate" attributeType="XML" attributeName="transform"/>
+			<animateTransform id="stormPause" begin="turb1.end" dur="0.4s" type="translate" attributeType="XML" attributeName="transform"/>
+			<animateTransform id="stormPause2" begin="turb2.end" dur="0.4s" type="translate" attributeType="XML" attributeName="transform"/>
+			<animateTransform id="stormEnd" begin="turb3.end" dur="0.5s" type="translate" attributeType="XML" attributeName="transform"/>
+			<animate id="scene2End" attributeType="css" attributeName="opacity" values="1;0" begin="stormEnd.end" dur="2s" fill="freeze"/>
+			<animateTransform attributeName="transform" type="translate" values="0,-30;0,-200" begin="scene2End.begin" dur="2s" fill="freeze"/>
+		</g>
 
-			<animateMotion path="M1800,-550 h500" begin="scene2.begin" dur="4s" fill="freeze"/>
-			<animateTransform id="turb1" attributeType="XML" type="translate" values="0,0;0,10;0,0" begin="scene2Start.end" dur="0.5s" attributeName="transform"/>
-			<animateTransform id="turb2" attributeType="XML" type="translate" values="0,0;5,5;0,0" begin="stormPause.end" dur="0.5s" attributeName="transform"/>
-			<animateTransform id="turb3" attributeType="XML" type="translate" values="0,0;-5,10;0,0" begin="stormPause2.end" dur="0.5s" attributeName="transform"/>
-
-			<animateMotion path="M2300,-550 h50 c350,00 400,50 900,400 q200,160 300,150 h500" begin="scene3.begin" dur="11s" fill="freeze"/>
+		<rect width="100%" height="100%" id="storm">
+			<animate id="stormAnim" attributeType="css" attributeName="opacity" values="0;0.9;0;0;0.9;0;0.9;0" begin="turb1.begin; turb2.begin; turb3.begin;" dur="0.4s"/>
+		</rect>
+	</g>
+	<g id="scene0">
+		<rect x="0" y="0" width="750" height="500" style="fill: url(#skyColor)"/>
+		<use y="150" xlink:href="#grass"/>
+		<use x="15" y="15" xlink:href="#sun"/>
+		<use x="-30" y="80" xlink:href="#longPineForest"/>
+		<use x="750" y="80" xlink:href="#longPineForest"/>
+		<use x="1500" y="80" xlink:href="#longPineForest"/>
+		<use x="1000" y="1250" xlink:href="#AirStrip" transform="scale(0.4)"/>
+		<use id="Guy1" x="1981" y="1120" xlink:href="#guy" transform="scale(0.4)">
+			<animateMotion path="M0,0 h-260" begin="4s" dur="5s"/>
 		</use>
-		<!-- <path d="M100,250 h550 c350,00 400,-50 900,-400 q200,-160 300,-150 h50" stroke="black" fill="none" stroke-width="2"/> -->
-		<!-- <path d="M1900,-300 h500" stroke="black" fill="none" stroke-width="2"/> -->
-		<!-- <path d="M2400,-300 h50 c350,00 400,50 900,400 q200,160 300,150 h500" stroke="black" fill="none" stroke-width="2"/> -->
-
-		<!-- ============== FOREGROUND - SCENE 1 ============== -->
-		<use xlink:href="#animatedCloud2"/>
-		<use xlink:href="#animatedCloud6"/>
-		<use xlink:href="#animatedCloud5"/>
-		<use xlink:href="#animatedCloud3"/>
-		<use xlink:href="#animatedCloud7"/>
-		<use xlink:href="#airport" transform="translate(130,350)"/>
-
-		<animateMotion id="scene1" path="M0,0 h-550 c-350,0 -400,50 -900,400 q-200,160 -300,150 h-50" begin="display.click" dur="11s" fill="freeze"/>
-		<animateMotion id="scene2" path="M-1800,550 h-500" begin="scene1.end" dur="4s" fill="freeze"/>
-		<animateMotion id="scene3" path="M-2300,550 h-50 c-350,0 -400,-50 -900,-400 q-200,-160 -300,-150 h-500" begin="scene2.end" dur="11s" fill="freeze"/>
-		<ellipse cx="4150" cy="230" rx="5" ry="5" fill="#CC0F16" />
+		<use id="Guy2" x="1981" y="1120" xlink:href="#guy" transform="scale(0.4)">
+			<animateMotion path="M0,0 h-260" begin="5s" dur="5s"/>
+		</use>
+		<use id="Guy3" x="1981" y="1120" xlink:href="#guy" transform="scale(0.4)">
+			<animateMotion path="M0,0 h-260" begin="6s" dur="5s"/>
+		</use>
+		<use id="Guy4" x="1981" y="1120" xlink:href="#guy" transform="scale(0.4)">
+			<animateMotion path="M0,0 h-260" begin="7s" dur="5s"/>
+		</use>
+		<use x="1981" y="1040" xlink:href="#WalkBridge" transform="scale(0.4)"> <!--1381-->
+			<animateMotion path="M0,0 h-240" begin="0s" dur="3s" fill="freeze"/>
+			<animateMotion path="M-240,0 h240" begin="12s" dur="3s" fill="freeze"/>
+		</use>
+		<use x="1140" y="1170" xlink:href="#Plane" transform="scale(0.4)"/>
+		<animateTransform id="scene0Anim" begin="0s" dur="15s" type="translate" attributeType="XML" attributeName="transform"/>
+		<animate id="scene0End" attributeType="css" attributeName="opacity" values="1;0" begin="scene0Anim.end" dur="2s" fill="freeze"/>
 	</g>
 
-	<!-- ============== CLOUDS - SCENE 2 ============== -->
-	<g transform="translate(0,-200)">
-		<use x="-200" y="10" xlink:href="#darkClouds"/>
-		<use x="0" y="-10" xlink:href="#darkClouds"/>
-		<use x="500" y="20" xlink:href="#darkClouds"/>
-		<animate id="scene2Start" attributeType="css" attributeName="opacity" values="0;1" begin="scene2.begin" dur="2s" fill="freeze"/>
-		<animateTransform attributeName="transform" type="translate" values="0,-200;0,-30" begin="scene2Start.begin" dur="2s" fill="freeze"/>
-		<animateTransform id="stormStart" begin="scene2Start.end" dur="0.5s" type="translate" attributeType="XML" attributeName="transform"/>
-		<animateTransform id="stormPause" begin="turb1.end" dur="0.4s" type="translate" attributeType="XML" attributeName="transform"/>
-		<animateTransform id="stormPause2" begin="turb2.end" dur="0.4s" type="translate" attributeType="XML" attributeName="transform"/>
-		<animateTransform id="stormEnd" begin="turb3.end" dur="0.5s" type="translate" attributeType="XML" attributeName="transform"/>
-		<animate id="scene2End" attributeType="css" attributeName="opacity" values="1;0" begin="stormEnd.end" dur="2s" fill="freeze"/>
-		<animateTransform attributeName="transform" type="translate" values="0,-30;0,-200" begin="scene2End.begin" dur="2s" fill="freeze"/>
-	</g>
-
-	<rect width="100%" height="100%" id="storm">
-		<animate id="stormAnim" attributeType="css" attributeName="opacity" values="0;0.9;0;0;0.9;0;0.9;0" begin="turb1.begin; turb2.begin; turb3.begin;" dur="0.4s"/>
-	</rect>
 	<!-- <use id="gridDisplay" xlink:href="#grid"/> -->
 
+	<text x="10" y="15" style="opacity: 0;">
+		<tspan>Scene0</tspan>
+		<animate attributeName="opacity" attributeType="css" from="0" to="1" begin="scene0Anim.begin" dur="0.1s" fill="freeze"/>
+		<animate attributeName="opacity" attributeType="css" from="1" to="0" begin="scene0End.end" dur="0.1s" fill="freeze"/>
+	</text>
 	<text x="10" y="15" style="opacity: 0;">
 		<tspan>Scene1</tspan>
 		<animate attributeName="opacity" attributeType="css" from="0" to="1" begin="scene1.begin" dur="0.1s" fill="freeze"/>
 		<animate attributeName="opacity" attributeType="css" from="1" to="0" begin="scene1.end" dur="0.1s" fill="freeze"/>
 	</text>
-	<text x="10" y="30" style="opacity: 0;">
+	<text x="10" y="15" style="opacity: 0;">
 		<tspan>Scene2</tspan>
 		<animate attributeName="opacity" attributeType="css" from="0" to="1" begin="scene2.begin" dur="0.1s" fill="freeze"/>
 		<animate attributeName="opacity" attributeType="css" from="1" to="0" begin="scene2.end" dur="0.1s" fill="freeze"/>
@@ -560,7 +791,7 @@ This is an SVG Animation of a plane
 		<animate attributeName="opacity" attributeType="css" from="0" to="1" begin="turb3.begin" dur="0.1s" fill="freeze"/>
 		<animate attributeName="opacity" attributeType="css" from="1" to="0" begin="turb3.end" dur="0.1s" fill="freeze"/>
 	</text>
-	<text x="10" y="75" style="opacity: 0;">
+	<text x="10" y="15" style="opacity: 0;">
 		<tspan>Scene3</tspan>
 		<animate attributeName="opacity" attributeType="css" from="0" to="1" begin="scene3.begin" dur="0.1s" fill="freeze"/>
 		<animate attributeName="opacity" attributeType="css" from="1" to="0" begin="scene3.end" dur="0.1s" fill="freeze"/>
